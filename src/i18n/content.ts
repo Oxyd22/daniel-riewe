@@ -163,6 +163,8 @@ export const projects: Record<
       body: string[];
       note?: string;
       cta?: { label: string; href: string; external?: boolean };
+      linksHeading?: string;
+      links?: { label: string; href: string }[];
     };
     en: {
       title: string;
@@ -172,6 +174,8 @@ export const projects: Record<
       body: string[];
       note?: string;
       cta?: { label: string; href: string; external?: boolean };
+      linksHeading?: string;
+      links?: { label: string; href: string }[];
     };
     paths: { de: string; en: string };
   }
@@ -278,26 +282,92 @@ export const projects: Record<
     de: {
       title: "Praxis-IT & Zahnarztwebsites",
       tag: "Web & IT",
-      card: "Websites und IT für Zahnarztpraxen — ruhig, vertrauenswürdig, ohne Kundennamen-Shopfenster.",
+      card: "Websites und IT für Zahnarztpraxen — ruhig, vertrauenswürdig; öffentliche Entwürfe verlinkt.",
       description:
-        "Daniel Riewe: Websites und IT-Unterstützung für Zahnarztpraxen. Kundendetails bleiben privat.",
+        "Daniel Riewe: Websites und IT für Zahnarztpraxen — inkl. öffentlicher Website-Entwürfe.",
       body: [
         "Aus der Nähe zum Praxisalltag (u. a. über Jahre mit iPad-Software für Praxen) entstehen auch Websites und IT-Hilfe für Zahnarztpraxen: klar, ruhig, mobil zuerst.",
-        "Kundennamen und interne Details bleiben hier bewusst anonym. Was öffentlich wird, entscheidet die jeweilige Praxis.",
+        "Öffentlich einsehbar sind Website-Entwürfe für eine Zahnarztpraxis (Praxis Klein / Dr. Gerhardt Klein): drei Richtungen, jeweils als Claude- und Grok-Variante. Die Übersicht bündelt sie — die Entwürfe sind nicht die Live-Site der Praxis.",
+        "Andere Kundennamen und interne Details bleiben hier bewusst anonym. Was öffentlich wird, entscheidet die jeweilige Praxis.",
       ],
-      note: "Keine Kundenliste auf dieser Seite.",
+      note: "Entwürfe zum Vergleichen, nicht die offizielle Praxis-Website.",
+      cta: {
+        label: "Zur Entwurfs-Übersicht",
+        href: "https://pk-uebersicht.jesaja-riewe.workers.dev/",
+        external: true,
+      },
+      linksHeading: "Sechs Varianten",
+      links: [
+        {
+          label: "Ruhige Premium — Claude",
+          href: "https://pk-ruhige-premium-claude.jesaja-riewe.workers.dev",
+        },
+        {
+          label: "Ruhige Premium — Grok",
+          href: "https://pk-ruhige-premium-grok.jesaja-riewe.workers.dev",
+        },
+        {
+          label: "Patientenreise — Claude",
+          href: "https://pk-patientenreise-claude.jesaja-riewe.workers.dev",
+        },
+        {
+          label: "Patientenreise — Grok",
+          href: "https://pk-patientenreise-grok.jesaja-riewe.workers.dev",
+        },
+        {
+          label: "Implantologie-Fokus — Claude",
+          href: "https://pk-implant-fokus-claude.jesaja-riewe.workers.dev",
+        },
+        {
+          label: "Implantologie-Fokus — Grok",
+          href: "https://pk-implant-fokus-grok.jesaja-riewe.workers.dev",
+        },
+      ],
     },
     en: {
       title: "Practice IT & dental websites",
       tag: "Web & IT",
-      card: "Websites and IT for dental practices — calm, trustworthy, without a customer name shopfront.",
+      card: "Websites and IT for dental practices — calm, trustworthy; public drafts linked.",
       description:
-        "Daniel Riewe: websites and IT support for dental practices. Client details stay private.",
+        "Daniel Riewe: websites and IT for dental practices — including public website drafts.",
       body: [
         "Closeness to practice life (including years with iPad software for clinics) also leads to websites and IT help for dental practices: clear, calm, mobile first.",
-        "Client names and internal details stay deliberately anonymous here. What goes public is the practice’s call.",
+        "Publicly viewable are website drafts for a dental practice (Praxis Klein / Dr. Gerhardt Klein): three directions, each as a Claude and a Grok variant. The overview collects them — the drafts are not the practice’s live site.",
+        "Other client names and internal details stay deliberately anonymous here. What goes public is the practice’s call.",
       ],
-      note: "No client list on this page.",
+      note: "Drafts for comparison, not the official practice website.",
+      cta: {
+        label: "Open draft overview",
+        href: "https://pk-uebersicht.jesaja-riewe.workers.dev/",
+        external: true,
+      },
+      linksHeading: "Six variants",
+      links: [
+        {
+          label: "Calm Premium — Claude",
+          href: "https://pk-ruhige-premium-claude.jesaja-riewe.workers.dev",
+        },
+        {
+          label: "Calm Premium — Grok",
+          href: "https://pk-ruhige-premium-grok.jesaja-riewe.workers.dev",
+        },
+        {
+          label: "Patient journey — Claude",
+          href: "https://pk-patientenreise-claude.jesaja-riewe.workers.dev",
+        },
+        {
+          label: "Patient journey — Grok",
+          href: "https://pk-patientenreise-grok.jesaja-riewe.workers.dev",
+        },
+        {
+          label: "Implant focus — Claude",
+          href: "https://pk-implant-fokus-claude.jesaja-riewe.workers.dev",
+        },
+        {
+          label: "Implant focus — Grok",
+          href: "https://pk-implant-fokus-grok.jesaja-riewe.workers.dev",
+        },
+      ],
     },
   },
   "ios-apps": {
