@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
-import { projects, ui, alternatePath } from "../../../../i18n/content";
+import ProjectDetail from "../../../../components/ProjectDetail.astro";
+import { projects, alternatePath } from "../../../../i18n/content";
 
 const lang = "en" as const;
 const slug = "praxis-it" as const;
 const p = projects[slug][lang];
-const u = ui[lang];
 ---
 <BaseLayout
   lang={lang}
@@ -14,46 +14,5 @@ const u = ui[lang];
   canonicalPath={projects[slug].paths.en}
   alternatePath={alternatePath(lang, slug)}
 >
-  <div class="container">
-    <p class="breadcrumb">
-      <a href="/en/">{u.homeLabel}</a> /
-      <a href="/en/projects/">{u.projectsLabel}</a> /
-      {p.title}
-    </p>
-    <article class="prose">
-      <p class="eyebrow">{p.tag}</p>
-      <h1>{p.title}</h1>
-      {p.body.map((para) => <p>{para}</p>)}
-      {p.note && <p class="note">{p.note}</p>}
-      {
-        p.links && p.links.length > 0 && (
-          <section class="demo-links" aria-label={p.linksHeading ?? "Links"}>
-            {p.linksHeading && <h2>{p.linksHeading}</h2>}
-            <ul>
-              {p.links.map((item) => (
-                <li>
-                  <a href={item.href} target="_blank" rel="noopener noreferrer">
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )
-      }
-      <div class="page-actions">
-        {p.cta && (
-          <a
-            class="btn btn-primary"
-            href={p.cta.href}
-            rel={p.cta.external ? "noopener noreferrer" : undefined}
-            target={p.cta.external ? "_blank" : undefined}
-          >
-            {p.cta.label}
-          </a>
-        )}
-        <a class="btn btn-ghost" href="/en/projects/">← {u.backProjects}</a>
-      </div>
-    </article>
-  </div>
+  <ProjectDetail lang={lang} slug={slug} />
 </BaseLayout>

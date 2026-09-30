@@ -1,17 +1,11 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import ProjectDetail from "../../../components/ProjectDetail.astro";
-import { projects, alternatePath, appSlugs } from "../../../i18n/content";
+import { projects, alternatePath } from "../../../i18n/content";
 
 const lang = "de" as const;
-const slug = "ios-apps" as const;
+const slug = "lmm-horoskop" as const;
 const p = projects[slug][lang];
-const related = appSlugs.map((s) => ({
-  href: projects[s].paths.de,
-  tag: projects[s][lang].tag,
-  title: projects[s][lang].title,
-  summary: projects[s][lang].card,
-}));
 ---
 <BaseLayout
   lang={lang}
@@ -20,5 +14,5 @@ const related = appSlugs.map((s) => ({
   canonicalPath={projects[slug].paths.de}
   alternatePath={alternatePath(lang, slug)}
 >
-  <ProjectDetail lang={lang} slug={slug} related={related} />
+  <ProjectDetail lang={lang} slug={slug} />
 </BaseLayout>

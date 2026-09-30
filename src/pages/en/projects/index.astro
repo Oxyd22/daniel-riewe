@@ -1,12 +1,11 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import ProjectCard from "../../../components/ProjectCard.astro";
-import { projectsIndex, projects, ui, alternatePath } from "../../../i18n/content";
+import { projectsIndex, projects, ui, alternatePath, projectsIndexOrder } from "../../../i18n/content";
 
 const lang = "en" as const;
 const t = projectsIndex[lang];
 const u = ui[lang];
-const order = ["ai-kalorien", "tschechen-jahn", "jesaja", "praxis-it", "ios-apps"] as const;
 ---
 <BaseLayout
   lang={lang}
@@ -22,7 +21,7 @@ const order = ["ai-kalorien", "tschechen-jahn", "jesaja", "praxis-it", "ios-apps
     <p class="lede">{t.intro}</p>
     <div class="project-grid" style="margin-top:2rem;">
       {
-        order.map((slug) => {
+        projectsIndexOrder.map((slug) => {
           const p = projects[slug][lang];
           return (
             <ProjectCard

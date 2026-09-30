@@ -573,3 +573,45 @@ h3 {
   color: var(--accent);
 }
 
+
+.project-hero {
+  margin: 0 0 var(--space-3);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-deep);
+}
+
+.project-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.project-hero figcaption {
+  padding: 0.65rem 0.9rem 0.85rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--ink-mute);
+}
+
+.project-hero figcaption a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-hero figcaption a:hover {
+  color: var(--accent);
+}
+
+.app-list {
+  margin: var(--space-4) 0;
+}
+
+.app-list h2 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-2);
+}
