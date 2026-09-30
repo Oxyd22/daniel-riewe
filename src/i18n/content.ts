@@ -5,7 +5,7 @@ export const site = {
   url: "https://daniel-riewe.pages.dev",
   xHandle: "@Jesaja",
   xUrl: "https://x.com/Jesaja",
-  aiKalorienUrl: "https://oxyd22.github.io/ai-kalorien/",
+  aiKalorienUrl: "https://ai-kalorien.pages.dev/",
 };
 
 type NavItem = { href: string; label: string };
@@ -190,7 +190,7 @@ export const projects: Record<
       ],
       cta: {
         label: "Zur Landingpage",
-        href: "https://oxyd22.github.io/ai-kalorien/",
+        href: "https://ai-kalorien.pages.dev/",
         external: true,
       },
     },
@@ -206,7 +206,7 @@ export const projects: Record<
       ],
       cta: {
         label: "Open landing page",
-        href: "https://oxyd22.github.io/ai-kalorien/",
+        href: "https://ai-kalorien.pages.dev/",
         external: true,
       },
     },
