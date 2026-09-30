@@ -155,7 +155,8 @@ export type ProjectSlug =
   | "tschechen-jahn"
   | "jesaja"
   | "praxis-it"
-  | "ios-apps";
+  | "ios-apps"
+  | "ai-harness-context";
 
 /** Apps shown on the ios-apps hub (and featured on index pages). */
 export const appSlugs = [
@@ -173,6 +174,7 @@ export const homeProjectOrder = [
   "teslaviewer",
   "billbuddy",
   "ios-apps",
+  "ai-harness-context",
   "tschechen-jahn",
   "jesaja",
   "praxis-it",
@@ -187,10 +189,18 @@ export const projectsIndexOrder = [
   "lmm-horoskop",
   "nova-power-logger",
   "mars-patrol",
+  "ai-harness-context",
   "tschechen-jahn",
   "jesaja",
   "praxis-it",
 ] as const satisfies readonly ProjectSlug[];
+
+type ProjectSection = {
+  heading: string;
+  body: string[];
+  note?: string;
+  links?: { label: string; href: string }[];
+};
 
 type ProjectCopy = {
   title: string;
@@ -199,6 +209,7 @@ type ProjectCopy = {
   description: string;
   body: string[];
   note?: string;
+  sections?: ProjectSection[];
   heroAlt?: string;
   heroCaption?: string;
   cta?: { label: string; href: string; external?: boolean };
@@ -666,13 +677,169 @@ export const projects: Record<
       ],
     },
   },
+  "ai-harness-context": {
+    paths: {
+      de: "/projekte/ai-harness-context/",
+      en: "/en/projects/ai-harness-context/",
+    },
+    de: {
+      title: "AI Harness Context",
+      tag: "KI / Agent-Harness",
+      card: "Experimente mit Context, Content und Multi-Agent-Arbeit — F.R.I.D.A.Y. → jarvis → edith, plus offenes Protokoll und Blueprints.",
+      description:
+        "AI Harness Context von Daniel Riewe — Experimente rund um AI Context Studio, Multi-Agent-Protokoll und projekt-lokale Blueprints.",
+      body: [
+        "Unter dem Dach AI Context Studio experimentiere ich mit Harness- und Content-Systemen: Generationen von F.R.I.D.A.Y. über jarvis bis edith. Immer Mensch plus KI — Content und Agent-Harness, die mir Arbeit abnehmen, ohne die Kontrolle zu ersetzen.",
+        "Viel davon ist Werkstatt: ausprobieren, was hält, was bricht, was sich lohnt zu dokumentieren. Hier die freigegebenen Stücke — ehrlich, ohne Secrets und ohne private Source-Links.",
+      ],
+      sections: [
+        {
+          heading: "ContextKit",
+          body: [
+            "Ein projekt-lokales Second Brain / Blueprint für iOS-Arbeit mit Claude Code: Struktur, Skills und Konventionen, die im Repo liegen statt in einem losen Chat-Verlauf.",
+          ],
+          note: "Konzept — das Repo ist privat; hier kein Quellcode-Link.",
+        },
+        {
+          heading: "just-the-two-of-us",
+          body: [
+            "Öffentliches Multi-Agent-Protokoll: Grok und Claude arbeiten an echter Software zusammen — nur über Shared Files und Git, ohne direkte API zwischen den Anbietern. Protokoll, Starter-Kits und Retrospektiven liegen im öffentlichen Repo.",
+          ],
+          links: [
+            {
+              label: "Repo auf GitHub",
+              href: "https://github.com/Oxyd22/just-the-two-of-us",
+            },
+          ],
+        },
+        {
+          heading: "FRIDAY-YT-Tech",
+          body: [
+            "Idee für eine Faceless-/Tech-Shorts-Pipeline: von Rohstoff zu kurzen Clips, ohne Gesicht vor der Kamera. Noch Konzept, kein fertiges Produkt.",
+          ],
+          note: "Konzept — das Repo ist privat; hier kein Quellcode-Link.",
+        },
+        {
+          heading: "Öffentliche Assets",
+          body: [
+            "Zwei öffentliche Asset-Repos mit Rohmaterial (Bilder, Videos, Visuals) für die Content-Systeme F.R.I.D.A.Y. und jarvis — ohne Harness-Source, nur Assets.",
+          ],
+          links: [
+            {
+              label: "f-r-i-d-a-y-assets auf GitHub",
+              href: "https://github.com/Oxyd22/f-r-i-d-a-y-assets",
+            },
+            {
+              label: "jarvis-assets auf GitHub",
+              href: "https://github.com/Oxyd22/jarvis-assets",
+            },
+          ],
+        },
+      ],
+      cta: {
+        label: "just-the-two-of-us auf GitHub",
+        href: "https://github.com/Oxyd22/just-the-two-of-us",
+        external: true,
+      },
+      linksHeading: "Öffentliche Links",
+      links: [
+        {
+          label: "just-the-two-of-us (Protokoll & Kits)",
+          href: "https://github.com/Oxyd22/just-the-two-of-us",
+        },
+        {
+          label: "f-r-i-d-a-y-assets",
+          href: "https://github.com/Oxyd22/f-r-i-d-a-y-assets",
+        },
+        {
+          label: "jarvis-assets",
+          href: "https://github.com/Oxyd22/jarvis-assets",
+        },
+      ],
+    },
+    en: {
+      title: "AI Harness Context",
+      tag: "AI / agent harness",
+      card: "Experiments with context, content, and multi-agent work — F.R.I.D.A.Y. → jarvis → edith, plus an open protocol and blueprints.",
+      description:
+        "AI Harness Context by Daniel Riewe — experiments around AI Context Studio, a multi-agent protocol, and project-local blueprints.",
+      body: [
+        "Under the umbrella of AI Context Studio I experiment with harness and content systems: generations from F.R.I.D.A.Y. through jarvis to edith. Always human plus AI — content and agent harnesses that take work off my plate without replacing control.",
+        "Much of it is workshop: try what holds, what breaks, what is worth documenting. Here are the pieces cleared for this site — honest, no secrets, no private source links.",
+      ],
+      sections: [
+        {
+          heading: "ContextKit",
+          body: [
+            "A project-local second brain / blueprint for iOS work with Claude Code: structure, skills, and conventions that live in the repo instead of a loose chat history.",
+          ],
+          note: "Concept — the repo is private; no source link here.",
+        },
+        {
+          heading: "just-the-two-of-us",
+          body: [
+            "A public multi-agent protocol: Grok and Claude collaborate on real software — through shared files and Git only, with no direct API between vendors. Protocol, starter kits, and retrospectives live in the public repo.",
+          ],
+          links: [
+            {
+              label: "Repo on GitHub",
+              href: "https://github.com/Oxyd22/just-the-two-of-us",
+            },
+          ],
+        },
+        {
+          heading: "FRIDAY-YT-Tech",
+          body: [
+            "An idea for a faceless / tech-shorts pipeline: from raw material to short clips, without a face on camera. Still a concept, not a finished product.",
+          ],
+          note: "Concept — the repo is private; no source link here.",
+        },
+        {
+          heading: "Public assets",
+          body: [
+            "Two public asset repos with raw material (images, videos, visuals) for the F.R.I.D.A.Y. and jarvis content systems — assets only, no harness source.",
+          ],
+          links: [
+            {
+              label: "f-r-i-d-a-y-assets on GitHub",
+              href: "https://github.com/Oxyd22/f-r-i-d-a-y-assets",
+            },
+            {
+              label: "jarvis-assets on GitHub",
+              href: "https://github.com/Oxyd22/jarvis-assets",
+            },
+          ],
+        },
+      ],
+      cta: {
+        label: "just-the-two-of-us on GitHub",
+        href: "https://github.com/Oxyd22/just-the-two-of-us",
+        external: true,
+      },
+      linksHeading: "Public links",
+      links: [
+        {
+          label: "just-the-two-of-us (protocol & kits)",
+          href: "https://github.com/Oxyd22/just-the-two-of-us",
+        },
+        {
+          label: "f-r-i-d-a-y-assets",
+          href: "https://github.com/Oxyd22/f-r-i-d-a-y-assets",
+        },
+        {
+          label: "jarvis-assets",
+          href: "https://github.com/Oxyd22/jarvis-assets",
+        },
+      ],
+    },
+  },
 };
 
 export const projectsIndex = {
   de: {
     title: "Projekte",
     description:
-      "Projekte von Daniel Riewe — Apps, AI Kalorien, Memoir, X, Praxis-IT.",
+      "Projekte von Daniel Riewe — Apps, AI Harness, Memoir, X, Praxis-IT.",
     eyebrow: "Arbeit & Experimente",
     headline: "Projekte",
     intro:
@@ -681,7 +848,7 @@ export const projectsIndex = {
   en: {
     title: "Projects",
     description:
-      "Projects by Daniel Riewe — apps, AI Kalorien, memoir, X, practice IT.",
+      "Projects by Daniel Riewe — apps, AI harness, memoir, X, practice IT.",
     eyebrow: "Work & experiments",
     headline: "Projects",
     intro: "Apps, side hustle, and stories — side by side, without marketing gloss.",

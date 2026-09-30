@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import ProjectDetail from "../../../../components/ProjectDetail.astro";
+import { projects, alternatePath } from "../../../../i18n/content";
+
+const lang = "en" as const;
+const slug = "ai-harness-context" as const;
+const p = projects[slug][lang];
+---
+<BaseLayout
+  lang={lang}
+  title={p.title}
+  description={p.description}
+  canonicalPath={projects[slug].paths.en}
+  alternatePath={alternatePath(lang, slug)}
+>
+  <ProjectDetail lang={lang} slug={slug} />
+</BaseLayout>
