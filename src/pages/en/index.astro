@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PhotoPlaceholder from "../../components/PhotoPlaceholder.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import { home, projects, ui, alternatePath } from "../../i18n/content";
+
+const lang = "en" as const;
+const t = home[lang];
+const u = ui[lang];
+const order = ["ai-kalorien", "tschechen-jahn", "jesaja", "praxis-it", "ios-apps"] as const;
+---
+<BaseLayout
+  lang={lang}
+  title={t.title}
+  description={t.description}
+  canonicalPath="/en/"
+  alternatePath={alternatePath(lang, "home")}
+>
+  <div class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">{t.eyebrow}</p>
+        <h1>{t.headline}</h1>
+        <p class="lede">{t.lede}</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/en/about/">{t.ctaVita}</a>
+          <a class="btn btn-ghost" href="/en/projects/">{t.ctaProjects}</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <PhotoPlaceholder lang={lang} />
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="projects-heading">
+      <div class="section-head">
+        <div>
+          <h2 id="projects-heading">{t.projectsTitle}</h2>
+          <p class="lede" style="margin:0;font-size:1.05rem;">{t.projectsIntro}</p>
+        </div>
+      </div>
+      <div class="project-grid">
+        {
+          order.map((slug) => {
+            const p = projects[slug][lang];
+            return (
+              <ProjectCard
+                href={projects[slug].paths.en}
+                tag={p.tag}
+                title={p.title}
+                summary={p.card}
+                moreLabel={u.readMore}
+              />
+            );
+          })
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

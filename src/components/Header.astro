@@ -1,0 +1,37 @@
+---
+import { ui, type Lang } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+  alternatePath: string;
+}
+
+const { lang, alternatePath } = Astro.props;
+const t = ui[lang];
+const path = Astro.url.pathname;
+---
+<a class="skip-link" href="#main">{t.skip}</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href={lang === "de" ? "/" : "/en/"}>{lang === "de" ? "Daniel Riewe" : "Daniel Riewe"}</a>
+    <nav class="nav" aria-label={lang === "de" ? "Hauptnavigation" : "Main"}>
+      {
+        t.nav.map((item) => {
+          const current =
+            item.href === "/" || item.href === "/en/"
+              ? path === item.href
+              : path === item.href || path.startsWith(item.href);
+          return (
+            <a href={item.href} aria-current={current ? "page" : undefined}>
+              {item.label}
+            </a>
+          );
+        })
+      }
+      <div class="lang-switch" aria-label={lang === "de" ? "Sprache" : "Language"}>
+        <a href={lang === "de" ? Astro.url.pathname : alternatePath} aria-current={lang === "de" ? "true" : undefined}>DE</a>
+        <a href={lang === "en" ? Astro.url.pathname : alternatePath} aria-current={lang === "en" ? "true" : undefined}>EN</a>
+      </div>
+    </nav>
+  </div>
+</header>

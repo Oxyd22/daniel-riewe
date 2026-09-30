@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { about, ui, site, alternatePath } from "../../../i18n/content";
+
+const lang = "en" as const;
+const t = about[lang];
+const u = ui[lang];
+---
+<BaseLayout
+  lang={lang}
+  title={t.title}
+  description={t.description}
+  canonicalPath="/en/about/"
+  alternatePath={alternatePath(lang, "about")}
+>
+  <div class="container">
+    <p class="breadcrumb"><a href="/en/">{u.homeLabel}</a> / {t.title}</p>
+    <article class="prose">
+      <p class="eyebrow">{t.eyebrow}</p>
+      <h1>{t.headline}</h1>
+      <p class="lede">{t.intro}</p>
+      <ul class="timeline">
+        {
+          t.timeline.map((item) => (
+            <li>
+              <div class="when">{item.when}</div>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+      <section class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">{t.contactTitle}</h2>
+        <p>{t.contactBody}</p>
+        <div class="page-actions">
+          <a class="btn btn-primary" href={site.xUrl} rel="noopener noreferrer" target="_blank">{site.xHandle}</a>
+          <a class="btn btn-ghost" href="/en/projects/">{u.projectsLabel}</a>
+        </div>
+      </section>
+    </article>
+  </div>
+</BaseLayout>

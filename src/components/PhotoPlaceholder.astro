@@ -1,0 +1,13 @@
+---
+import { ui, type Lang } from "../i18n/content";
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const label = ui[lang].photoPlaceholder;
+---
+<div class="photo-frame" role="img" aria-label={label}>
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 54c4-12 14-18 20-18s16 6 20 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <span>{label}</span>
+</div>
