@@ -467,28 +467,78 @@ export const projects: Record<
   "mars-patrol": {
     paths: { de: "/projekte/mars-patrol/", en: "/en/projects/mars-patrol/" },
     de: {
-      title: "MarsPatrol",
-      tag: "iOS",
-      card: "iOS-Arcade mit SpriteKit. Privates Repo — kein Source-Link, kein erfundener Store-Eintrag.",
+      title: "Mars Patrol",
+      tag: "iOS & macOS",
+      card: "Arcade-Side-Scroller: Cybertruck auf dem Mars, Tesla-/SpaceX-/Grok-Motive. Nativ auf iOS und macOS — privates Repo, kein Store-Link.",
       description:
-        "MarsPatrol von Daniel Riewe — iOS-Arcade-Spiel mit SpriteKit.",
+        "Mars Patrol von Daniel Riewe — SpriteKit-Arcade mit Cybertruck, Grok-Stimme und echten Screenshots von iOS und macOS.",
       body: [
-        "MarsPatrol ist ein iOS-Arcade-Spiel auf Basis von SpriteKit — gebaut zum Spielen und Experimentieren, nicht als Marketing-Case-Study.",
-        "Das Repo ist privat. Hier gibt es weder Source-Link noch App-Store-Link.",
+        "Mars Patrol ist ein Side-Scroller im Arcade-Stil — Cybertruck auf dem Mars, mit Tesla-, SpaceX- und Grok-Motiven. Läuft nativ auf iOS und macOS.",
+        "Die Collage oben stammt aus echten Testläufen beider Plattformen. Tests nachgeprüft: iOS 96 plus 3 UI-Tests, macOS 97.",
+        "Das Repo ist privat. Kein App-Store-Link hier.",
       ],
-      note: "Nur freigegebene Beschreibung — keine erfundenen Screenshots oder Store-URLs.",
+      heroAlt:
+        "Collage aus Mars-Patrol-Screenshots: macOS-Gameplay und iOS-Menü mit Cybertruck, Starbase und Grok-HUD",
+      heroCaption: "Screenshots aus echten Testläufen auf macOS und iOS.",
+      sections: [
+        {
+          heading: "Spielwelt",
+          body: [
+            "Spielerfahrzeug ist ein Cybertruck mit einzeln gefederten Rädern, rotem KITT-Scanner und Crash-/Elektro-Explosion. Gegner: gehackte Starlink, Mars-UFOs, gekaperter Tesla Semi, Optimus-Roboter, Felsbrocken und Alien-Minen. Hintergründe mit Olympus Mons, Starbase/Startturm, Tesla Diner/Supercharger und landendem Starship.",
+            "Alte Moon-Patrol-Grafiken, Arcade-Flyer-Icon, alte Sounds und „©1982 IREM“ sind raus — alles neu mit Tesla-, SpaceX- und Grok-Motiven.",
+          ],
+        },
+        {
+          heading: "Grok & HUD",
+          body: [
+            "Grok spricht wie KITT — Stimme „Reed“, 80er-Bordcomputer — mit 125 frechen deutschen Sprüchen. HUD mit Emblem und KITT-Voicebox (drei LEDs); Stimme und Musik im Menü und ingame über V/M.",
+          ],
+        },
+        {
+          heading: "iOS & macOS",
+          body: [
+            "Nativ auf beiden Plattformen (SpriteKit). Auf macOS: Tastatur und Gamepad, Fokusverlust pausiert, Kurzbefehle ⌘P / ⇧⌘V / ⇧⌘M.",
+          ],
+        },
+      ],
+      note: "Privates Repo (Oxyd22/MarsPatrol) — kein Source-Link, kein erfundener Store-Eintrag.",
     },
     en: {
-      title: "MarsPatrol",
-      tag: "iOS",
-      card: "iOS SpriteKit arcade. Private repo — no source link, no invented store listing.",
+      title: "Mars Patrol",
+      tag: "iOS & macOS",
+      card: "Arcade side-scroller: Cybertruck on Mars, Tesla/SpaceX/Grok motifs. Native on iOS and macOS — private repo, no store link.",
       description:
-        "MarsPatrol by Daniel Riewe — iOS arcade game built with SpriteKit.",
+        "Mars Patrol by Daniel Riewe — SpriteKit arcade with Cybertruck, Grok voice, and real screenshots from iOS and macOS.",
       body: [
-        "MarsPatrol is an iOS arcade game built with SpriteKit — made to play and tinker, not as a marketing case study.",
-        "The repo is private. There is neither a source link nor an App Store link here.",
+        "Mars Patrol is an arcade-style side-scroller — Cybertruck on Mars, with Tesla, SpaceX, and Grok motifs. Runs natively on iOS and macOS.",
+        "The collage above is from real test runs on both platforms. Tests verified: iOS 96 plus 3 UI tests, macOS 97.",
+        "The repo is private. No App Store link here.",
       ],
-      note: "Cleared description only — no invented screenshots or store URLs.",
+      heroAlt:
+        "Collage of Mars Patrol screenshots: macOS gameplay and iOS menu with Cybertruck, Starbase, and Grok HUD",
+      heroCaption: "Screenshots from real test runs on macOS and iOS.",
+      sections: [
+        {
+          heading: "Game world",
+          body: [
+            "You drive a Cybertruck with independently sprung wheels, a red KITT scanner, and crash/electric explosions. Enemies: hacked Starlink, Mars UFOs, a hijacked Tesla Semi, Optimus robots, boulders, and alien mines. Backdrops include Olympus Mons, Starbase/launch tower, Tesla Diner/Supercharger, and a landing Starship.",
+            "Old Moon Patrol art, arcade-flyer icon, old sounds, and “©1982 IREM” are gone — rebuilt around Tesla, SpaceX, and Grok motifs.",
+          ],
+        },
+        {
+          heading: "Grok & HUD",
+          body: [
+            "Grok talks like KITT — “Reed” voice, 1980s onboard computer — with 125 cheeky German lines. HUD with emblem and KITT voicebox (three LEDs); voice and music in the menu and in-game via V/M.",
+          ],
+        },
+        {
+          heading: "iOS & macOS",
+          body: [
+            "Native on both platforms (SpriteKit). On macOS: keyboard and gamepad, losing focus pauses, shortcuts ⌘P / ⇧⌘V / ⇧⌘M.",
+          ],
+        },
+      ],
+      note: "Private repo (Oxyd22/MarsPatrol) — no source link, no invented store listing.",
     },
   },
   "tschechen-jahn": {
