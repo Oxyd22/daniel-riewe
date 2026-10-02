@@ -12,6 +12,8 @@ interface Props {
   canonicalPath: string;
   alternatePath: string;
   ogType?: string;
+  /** Optional body class for page-scoped themes (e.g. mars game look). */
+  bodyClass?: string;
 }
 
 const {
@@ -21,6 +23,7 @@ const {
   canonicalPath,
   alternatePath,
   ogType = "website",
+  bodyClass,
 } = Astro.props;
 
 const fullTitle = title.includes(site.name) ? title : `${title} · ${site.name}`;
@@ -60,7 +63,7 @@ const ogLocaleAlt = lang === "de" ? "en_US" : "de_DE";
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class:list={[bodyClass]}>
     <div class="site-wrap">
       <Header lang={lang} alternatePath={alternatePath} />
       <main id="main" class="site-main">

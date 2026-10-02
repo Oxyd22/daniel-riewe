@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import ProjectDetail from "../../../components/ProjectDetail.astro";
+import MarsPatrolPage from "../../../components/MarsPatrolPage.astro";
 import { projects, alternatePath } from "../../../i18n/content";
 
 const lang = "de" as const;
@@ -13,6 +13,7 @@ const p = projects[slug][lang];
   description={p.description}
   canonicalPath={projects[slug].paths.de}
   alternatePath={alternatePath(lang, slug)}
+  bodyClass="theme-mars"
 >
-  <ProjectDetail lang={lang} slug={slug} />
+  <MarsPatrolPage lang={lang} />
 </BaseLayout>
