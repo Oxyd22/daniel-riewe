@@ -1,11 +1,12 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import HobbyBlock from "../../../components/HobbyBlock.astro";
-import { about, ui, site, alternatePath } from "../../../i18n/content";
+import { about, ui, site, alternatePath, illustrations, hobby } from "../../../i18n/content";
 
 const lang = "en" as const;
 const t = about[lang];
 const u = ui[lang];
+const portrait = illustrations.portrait;
 ---
 <BaseLayout
   lang={lang}
@@ -19,6 +20,10 @@ const u = ui[lang];
     <article class="prose">
       <p class="eyebrow">{t.eyebrow}</p>
       <h1>{t.headline}</h1>
+      <figure class="illus vita-portrait">
+        <img src={portrait.src} alt={portrait.alt[lang]} width="848" height="1216" />
+        <figcaption>{hobby[lang].illustrationNote}</figcaption>
+      </figure>
       <p class="lede">{t.intro}</p>
       <ul class="timeline">
         {
@@ -31,7 +36,7 @@ const u = ui[lang];
           ))
         }
       </ul>
-      <HobbyBlock lang={lang} showBeach />
+      <HobbyBlock lang={lang} />
       <section class="section" aria-labelledby="contact-heading">
         <h2 id="contact-heading">{t.contactTitle}</h2>
         <p>{t.contactBody}</p>

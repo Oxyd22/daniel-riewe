@@ -1,6 +1,6 @@
 ---
 import type { Lang, ProjectSlug } from "../i18n/content";
-import { projects, ui } from "../i18n/content";
+import { projects, ui, cardMedia, hobby } from "../i18n/content";
 import ProjectCard from "./ProjectCard.astro";
 
 interface Props {
@@ -21,6 +21,8 @@ interface Props {
 const { lang, slug, related } = Astro.props;
 const p = projects[slug][lang];
 const u = ui[lang];
+const media = cardMedia[slug];
+const showCard = slug !== "mars-patrol" && !p.heroAlt;
 const homeHref = lang === "de" ? "/" : "/en/";
 const projectsHref = lang === "de" ? "/projekte/" : "/en/projects/";
 ---
@@ -33,6 +35,21 @@ const projectsHref = lang === "de" ? "/projekte/" : "/en/projects/";
   <article class="prose">
     <p class="eyebrow">{p.tag}</p>
     <h1>{p.title}</h1>
+    {
+      showCard && (
+        <figure class="project-card-figure">
+          <img
+            src={media.src}
+            alt={media.alt[lang]}
+            width="1200"
+            height="800"
+            loading="eager"
+            decoding="async"
+          />
+          {media.kind === "illustration" && <figcaption>{hobby[lang].illustrationNote}</figcaption>}
+        </figure>
+      )
+    }
     {
       p.heroAlt && (
         <figure class="project-hero">

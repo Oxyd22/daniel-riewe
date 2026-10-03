@@ -271,6 +271,54 @@ h3 {
   justify-self: center;
 }
 
+.home-banner {
+  margin: 0;
+  width: 100%;
+}
+
+.home-banner img {
+  width: 100%;
+  max-height: min(46vh, 520px);
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  background: var(--sky);
+}
+
+.home-banner figcaption {
+  max-width: var(--max-wide);
+  margin: 0.35rem auto 0;
+  padding: 0 1.25rem;
+  font-size: 0.8rem;
+  color: var(--ink-mute);
+}
+
+.hero-copy {
+  display: block;
+}
+
+.vita-portrait {
+  margin: 0 0 var(--space-3);
+}
+
+.vita-portrait img {
+  width: min(320px, 86vw);
+}
+
+.project-card-figure {
+  margin: 0 0 var(--space-3);
+}
+
+.project-card-figure img {
+  width: min(720px, 100%);
+  border-radius: 18px;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 0 rgba(43, 184, 196, 0.18);
+}
+
+
 .photo-frame {
   width: min(220px, 70vw);
   aspect-ratio: 1;

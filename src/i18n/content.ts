@@ -879,45 +879,46 @@ export const projects: Record<
 
 export const cardMedia: Record<
   ProjectSlug,
-  { src: string; alt: Record<Lang, string>; pixel?: boolean }
+  { src: string; alt: Record<Lang, string>; pixel?: boolean; kind?: "illustration" | "screenshot" }
 > = {
   "ai-kalorien": {
     src: "/images/ai-kalorien-card.webp",
+    kind: "screenshot",
     alt: {
       de: "Screenshot des Kurzbefehls: Tageskalorien eingetragen, mit Fortschritt in Apple Health",
       en: "Shortcut screenshot: daily calories logged, with progress toward Apple Health",
     },
   },
   teslaviewer: {
-    src: "/images/teslaviewer-card.webp",
-    pixel: true,
+    src: "/images/teslaviewer-card.png",
+    kind: "illustration",
     alt: {
-      de: "Pixelbild eines Fensters mit sechs Kamera-Kacheln im 3×2-Raster",
-      en: "Pixel illustration of a window with six camera tiles in a 3×2 grid",
+      de: "Illustration: rote Kappe am Schreibtisch, Fenster mit sechs Kamera-Kacheln. Kein Foto.",
+      en: "Illustration: red cap at a desk, a window with six camera tiles. Not a photograph.",
     },
   },
   billbuddy: {
-    src: "/images/billbuddy-card.webp",
-    pixel: true,
+    src: "/images/billbuddy-card.png",
+    kind: "illustration",
     alt: {
-      de: "Pixelbild einer Rechnung, die in zwei Stapel geteilt wird",
-      en: "Pixel illustration of a receipt split into two stacks",
+      de: "Illustration: eine Rechnung wird in zwei Stapel geteilt. Kein Foto.",
+      en: "Illustration: one receipt split into two stacks. Not a photograph.",
     },
   },
   "lmm-horoskop": {
-    src: "/images/lmm-horoskop-card.webp",
-    pixel: true,
+    src: "/images/lmm-horoskop-card.png",
+    kind: "illustration",
     alt: {
-      de: "Pixelbild eines Nachthimmels mit Mond über einem kleinen Bildschirm",
-      en: "Pixel illustration of a night sky and moon above a small screen",
+      de: "Illustration: rote Kappe, Handy mit Sternbild, Laptop daneben. Kein Foto.",
+      en: "Illustration: red cap, a phone with a constellation, a laptop beside it. Not a photograph.",
     },
   },
   "nova-power-logger": {
-    src: "/images/nova-power-logger-card.webp",
-    pixel: true,
+    src: "/images/nova-power-logger-card.png",
+    kind: "illustration",
     alt: {
-      de: "Pixelbild einer Menüleiste mit Sonne und grünen Solar-Balken",
-      en: "Pixel illustration of a menu bar with a sun and green solar bars",
+      de: "Illustration: rote Kappe neben einem Laptop mit Sonne und grünen Solar-Balken. Kein Foto.",
+      en: "Illustration: red cap beside a laptop with a sun and green solar bars. Not a photograph.",
     },
   },
   "mars-patrol": {
@@ -935,34 +936,35 @@ export const cardMedia: Record<
     },
   },
   jesaja: {
-    src: "/images/jesaja-card.webp",
-    pixel: true,
+    src: "/images/jesaja-card.png",
+    kind: "illustration",
     alt: {
-      de: "Pixelbild eines Terminals mit Sprechblasen, ohne Porträt",
-      en: "Pixel illustration of a terminal and speech bubbles, no portrait",
+      de: "Illustration: rote Kappe, Drum-Pad und leere Sprechblase. Kein Foto.",
+      en: "Illustration: red cap, a drum pad, and an empty speech bubble. Not a photograph.",
     },
   },
   "praxis-it": {
     src: "/images/praxis-it-card.webp",
+    kind: "screenshot",
     alt: {
       de: "Ausschnitt eines Praxis-Website-Entwurfs: blaues Behandlungszimmer",
       en: "Crop of a practice-website draft: a blue treatment room",
     },
   },
   "ios-apps": {
-    src: "/images/ios-apps-card.webp",
-    pixel: true,
+    src: "/images/ios-apps-card.png",
+    kind: "illustration",
     alt: {
-      de: "Pixel-Raster aus sechs farbigen App-Kacheln",
-      en: "Pixel grid of six colored app tiles",
+      de: "Illustration: sechs einfache App-Kacheln auf einem Tisch. Kein Foto.",
+      en: "Illustration: six simple app tiles on a table. Not a photograph.",
     },
   },
   "ai-harness-context": {
-    src: "/images/ai-harness-context-card.webp",
-    pixel: true,
+    src: "/images/ai-harness-context-card.png",
+    kind: "illustration",
     alt: {
-      de: "Pixelbild von drei verbundenen Knoten für Agenten-Experimente",
-      en: "Pixel illustration of three connected nodes for agent experiments",
+      de: "Illustration der Reihe F.R.I.D.A.Y., jarvis und edith. Kein Foto.",
+      en: "Illustration of the line from F.R.I.D.A.Y. through jarvis to edith. Not a photograph.",
     },
   },
 };

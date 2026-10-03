@@ -6,7 +6,7 @@ import { cardMedia, home, projects, alternatePath, homeProjectOrder, illustratio
 
 const lang = "en" as const;
 const t = home[lang];
-const portrait = illustrations.portrait;
+const banner = illustrations.beach;
 const note = hobby[lang].illustrationNote;
 ---
 <BaseLayout
@@ -16,8 +16,12 @@ const note = hobby[lang].illustrationNote;
   canonicalPath="/en/"
   alternatePath={alternatePath(lang, "home")}
 >
+  <figure class="home-banner">
+    <img src={banner.src} alt={banner.alt[lang]} width="1500" height="500" />
+    <figcaption>{note}</figcaption>
+  </figure>
   <div class="container">
-    <section class="hero">
+    <section class="hero hero-copy">
       <div>
         <p class="eyebrow">{t.eyebrow}</p>
         <h1>{t.headline}</h1>
@@ -27,10 +31,6 @@ const note = hobby[lang].illustrationNote;
           <a class="btn btn-ghost" href="/en/projects/">{t.ctaProjects}</a>
         </div>
       </div>
-      <figure class="hero-photo illus">
-        <img src={portrait.src} alt={portrait.alt[lang]} width="848" height="1216" />
-        <figcaption>{note}</figcaption>
-      </figure>
     </section>
 
     <HobbyBlock lang={lang} />
