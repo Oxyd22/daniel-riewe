@@ -1,17 +1,20 @@
-/* Warm Personal — paper, soft light, memoir-adjacent */
+/* Manga beach — flat, sunny, light. Sky, turquoise, sand, red, yellow. */
 :root {
-  --paper: #f6f1e8;
-  --paper-deep: #ebe4d6;
-  --card: #fffcf7;
-  --ink: #2a2520;
-  --ink-soft: #5c534a;
-  --ink-mute: #7a7166;
-  --accent: #c1272d;
-  --accent-hover: #8e1c22;
-  --accent-soft: #c4785a;
-  --line: #d9cfbf;
-  --focus: #2a2520;
-  --radius: 12px;
+  --paper: #fff6df;
+  --paper-deep: #ffe7b8;
+  --card: #fffdf6;
+  --ink: #1d3a4a;
+  --ink-soft: #315566;
+  --ink-mute: #5d7c88;
+  --accent: #e23b32;
+  --accent-hover: #b4231c;
+  --accent-soft: #2bb8c4;
+  --line: #f0d48a;
+  --focus: #1d3a4a;
+  --sky: #7ec8ea;
+  --sand: #f6e2a8;
+  --yellow: #ffd23a;
+  --radius: 16px;
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -20,8 +23,8 @@
   --space-6: 6rem;
   --max: 42rem;
   --max-wide: 64rem;
-  --font-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --font-sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-serif: "Nunito", "Segoe UI", system-ui, sans-serif;
+  --font-sans: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
 *,
@@ -54,7 +57,7 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--ink);
-  background: #b4b4b4;
+  background: linear-gradient(180deg, #9fd6f2 0%, #e7f6ff 32%, #fff3cc 100%);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -106,7 +109,7 @@ button:focus-visible {
 
 .site-header {
   border-bottom: 1px solid var(--line);
-  background: rgba(246, 241, 232, 0.85);
+  background: rgba(255, 246, 223, 0.92);
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
@@ -185,8 +188,8 @@ button:focus-visible {
 }
 
 .lang-switch a[aria-current="true"] {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--accent);
+  color: #fffaf0;
 }
 
 .site-main {
@@ -271,10 +274,9 @@ h3 {
 .photo-frame {
   width: min(220px, 70vw);
   aspect-ratio: 1;
-  border-radius: 2px;
+  border-radius: 18px;
   background: var(--paper-deep);
-  border: 2px solid #1a1a1a;
-  box-shadow: inset 0 0 0 6px #d7d7d7, 3px 3px 0 #1a1a1a;
+  border: 3px solid var(--yellow);
   display: grid;
   place-items: center;
   color: var(--ink-mute);
@@ -371,29 +373,28 @@ h3 {
 
 .project-card {
   background: var(--card);
-  border: 2px solid #1a1a1a;
-  border-radius: 2px;
+  border: 3px solid var(--yellow);
+  border-radius: 18px;
   padding: 0;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 3px 3px 0 #1a1a1a;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 10px 0 rgba(43, 184, 196, 0.28);
+  transition: transform 0.12s ease;
 }
 
 .project-card:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 5px 5px 0 #1a1a1a;
+  transform: translateY(-2px);
   color: inherit;
 }
 
 .card-shot {
   display: block;
   aspect-ratio: 16 / 9;
-  background: #1a1a1a;
-  border-bottom: 2px solid #1a1a1a;
+  background: #dff4fb;
+  border-bottom: 3px solid var(--yellow);
   overflow: hidden;
 }
 
@@ -480,7 +481,7 @@ h3 {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  background: rgba(235, 228, 214, 0.45);
+  background: rgba(255, 231, 184, 0.72);
   margin-top: auto;
 }
 
@@ -591,7 +592,7 @@ h3 {
   padding: 0.55rem 0.85rem;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(235, 228, 214, 0.35);
+  background: rgba(255, 243, 204, 0.7);
 }
 
 .demo-links a {
@@ -658,7 +659,7 @@ h3 {
   padding: 1.1rem 1.15rem 1.15rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(255, 252, 247, 0.72);
+  background: rgba(255, 253, 246, 0.88);
 }
 
 .project-section h2 {
@@ -691,7 +692,7 @@ h3 {
   padding: 0.45rem 0.75rem;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(235, 228, 214, 0.35);
+  background: rgba(255, 243, 204, 0.7);
 }
 
 .project-section .section-links a {
@@ -704,137 +705,6 @@ h3 {
   color: var(--accent);
 }
 
-/* Macintosh window + a thin Nintendo color strip. Scoped so Mars Patrol stays dark. */
-.mac-desktop {
-  min-height: 100vh;
-  padding: 0.85rem 0.85rem 1.5rem;
-  background:
-    linear-gradient(#c8c8c8 1px, transparent 1px),
-    linear-gradient(90deg, #c8c8c8 1px, transparent 1px),
-    #b4b4b4;
-  background-size: 8px 8px, 8px 8px, auto;
-}
-
-.nes-strip {
-  display: flex;
-  max-width: 76rem;
-  margin: 0 auto 0.55rem;
-  height: 8px;
-  border: 2px solid #1a1a1a;
-}
-
-.nes-strip span {
-  flex: 1;
-}
-
-.nes-strip span:nth-child(1) { background: #e60012; }
-.nes-strip span:nth-child(2) { background: #f8d800; }
-.nes-strip span:nth-child(3) { background: #00a651; }
-.nes-strip span:nth-child(4) { background: #0057b8; }
-
-.mac-window {
-  max-width: 76rem;
-  margin: 0 auto;
-  background: var(--paper);
-  border: 2px solid #1a1a1a;
-  box-shadow: 4px 4px 0 #1a1a1a;
-  min-height: calc(100vh - 2.5rem);
-  display: flex;
-  flex-direction: column;
-}
-
-.mac-titlebar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  display: flex;
-  align-items: stretch;
-  gap: 0.35rem;
-  background-color: #d5d5d5;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #ececec 0 1px,
-    #cfcfcf 1px 3px
-  );
-  border-bottom: 2px solid #1a1a1a;
-  backdrop-filter: none;
-}
-
-.mac-dots {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding-left: 0.7rem;
-}
-
-.mac-dots i {
-  width: 12px;
-  height: 12px;
-  border: 2px solid #1a1a1a;
-  display: block;
-}
-
-.mac-dots i:nth-child(1) { background: #e60012; }
-.mac-dots i:nth-child(2) { background: #f8d800; }
-.mac-dots i:nth-child(3) { background: #00a651; }
-
-.mac-window .header-inner {
-  flex: 1;
-  padding-left: 0.35rem;
-}
-
-.mac-window .site-header {
-  background: transparent;
-  border-bottom: 0;
-}
-
-.mac-window .lang-switch {
-  border-radius: 2px;
-  border: 2px solid #1a1a1a;
-}
-
-.mac-window .lang-switch a[aria-current="true"] {
-  background: #1a1a1a;
-  color: #f6f1e8;
-}
-
-.mac-window .btn {
-  border-radius: 2px;
-  border: 2px solid #1a1a1a;
-  box-shadow: 2px 2px 0 #1a1a1a;
-}
-
-.mac-window .btn-primary {
-  background: #e60012;
-  color: #fffaf5;
-}
-
-.mac-window .btn-primary:hover {
-  background: #b0000c;
-  color: #fffaf5;
-}
-
-.mac-window .btn-ghost {
-  background: #f4f1ea;
-}
-
-.mac-window .site-main {
-  flex: 1;
-}
-
-.mac-window .site-footer {
-  background: #e4ddd0;
-  border-top: 2px solid #1a1a1a;
-}
-
-.mac-window .container {
-  padding-top: 1.75rem;
-}
-
-.mac-window .section {
-  margin-top: 2rem;
-}
-
 .illus {
   margin: 0;
 }
@@ -843,8 +713,9 @@ h3 {
   display: block;
   width: min(280px, 78vw);
   height: auto;
-  border: 2px solid #1a1a1a;
-  box-shadow: 3px 3px 0 #1a1a1a;
+  border-radius: 22px;
+  border: 4px solid #fff;
+  box-shadow: 0 12px 0 rgba(226, 59, 50, 0.18);
   background: #fff;
 }
 
@@ -861,6 +732,8 @@ h3 {
 
 .illus-wide img {
   width: min(920px, 100%);
+  border-radius: 18px;
+  box-shadow: 0 12px 0 rgba(43, 184, 196, 0.22);
 }
 
 .hobby p {

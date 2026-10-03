@@ -25,7 +25,7 @@ export const ui = {
     langOtherHref: "/en/",
     readMore: "Mehr lesen",
     backProjects: "Alle Projekte",
-    footerNote: "Persönliche Seite · Holzgerlingen / Region Stuttgart",
+    footerNote: "Persönliche Seite",
     contactFollows: "Kontakt folgt",
     photoPlaceholder: "[Foto folgt]",
   },
@@ -43,7 +43,7 @@ export const ui = {
     langOtherHref: "/",
     readMore: "Read more",
     backProjects: "All projects",
-    footerNote: "Personal site · Holzgerlingen / Stuttgart region",
+    footerNote: "Personal site",
     contactFollows: "Contact coming soon",
     photoPlaceholder: "[Photo forthcoming]",
   },
@@ -53,10 +53,10 @@ export const home = {
   de: {
     title: "Daniel Riewe",
     description:
-      "iOS-Entwickler bei Mercedes-Benz. Side-Hustle: KI-Bots und Automatisierung. Persönliche Projekte — von Shortcuts bis Memoir.",
+      "Der Typ mit der roten Kappe am Meer. Hip-Hop in Berlin, Nintendo, Atari, heute Akai MPC.",
     eyebrow: "Portfolio & Vita",
     headline: "Hallo — ich bin Daniel.",
-    lede: "iOS-Entwickler bei Mercedes-Benz, früher Apps für Zahnarztpraxen. Nebenbei baue ich KI-Bots, Automatisierung und Dinge, die mir unter den Nägeln brennen — von einem kostenlosen Kalorien-Shortcut bis zu einem Memoir über Berlin in den Achtzigern.",
+    lede: "Der Typ mit der roten Kappe am Meer. Als Teenager Hip-Hop in Berlin, Nintendo und Atari. Heute Old-school auf einem Akai MPC. Die Projekte stehen daneben.",
     ctaVita: "Zur Vita",
     ctaProjects: "Projekte ansehen",
     projectsTitle: "Ausgewählte Projekte",
@@ -65,10 +65,10 @@ export const home = {
   en: {
     title: "Daniel Riewe",
     description:
-      "iOS developer at Mercedes-Benz. Side hustle: AI bots and automation. Personal projects — from Shortcuts to memoir.",
+      "The guy in the red cap by the sea. Hip-hop in Berlin, Nintendo, Atari, an Akai MPC today.",
     eyebrow: "Portfolio & about",
     headline: "Hi — I’m Daniel.",
-    lede: "iOS developer at Mercedes-Benz, formerly building apps for dental practices. On the side I build AI bots, automation, and things that won’t leave me alone — from a free calorie Shortcut to a memoir about Berlin in the 1980s.",
+    lede: "The guy in the red cap by the sea. Hip-hop in Berlin as a teenager, Nintendo, and Atari. Old-school on an Akai MPC now. The projects sit next to that.",
     ctaVita: "About me",
     ctaProjects: "See projects",
     projectsTitle: "Selected projects",
@@ -79,31 +79,31 @@ export const home = {
 export const about = {
   de: {
     title: "Vita",
-    description: "Kurz über Daniel Riewe — iOS, Praxis-IT, KI und Schreiben.",
+    description: "Kurz über Daniel Riewe — Berlin, Hip-Hop, Nintendo, Atari, Akai MPC.",
     eyebrow: "Über mich",
-    headline: "Ein knapper Lebens- und Arbeitsweg",
+    headline: "Rote Kappe, gelbes Shirt, Meer dahinter",
     intro:
-      "Ich bin 51, lebe in der Region Stuttgart (Holzgerlingen und Umgebung) und arbeite als iOS-Entwickler bei Mercedes-Benz. Technik ist mein Handwerk; neben dem Hauptjob bleiben Raum für Experimente und für Geschichten, die erzählt werden wollen.",
+      "Der Typ mit der roten Kappe am Meer. Zur Apple-Welt, weil Atari pleite ging. Hip-Hop, Nintendo und ein MPC gehören dazu — kein Lebenslauf.",
     timeline: [
       {
+        when: "Berlin",
+        title: "Hip-Hop als Teenager",
+        body: "Hip-Hop in Berlin, damals mit Cubase. Direct-to-disk und MIDI.",
+      },
+      {
+        when: "Nintendo",
+        title: "Konsolen, die in Deutschland liefen",
+        body: "Als Kind Konsolen importiert und umgebaut, damit sie hier liefen. Eines der ersten kleinen Geschäfte. Lieber Nintendo, wenn der Kopf voll ist.",
+      },
+      {
+        when: "Atari",
+        title: "Falcon 030 im Rack",
+        body: "Zwei Jahre gespart für einen Atari Falcon 030, dann in ein 19-Zoll-Rack. Hardware und System von innen.",
+      },
+      {
         when: "Heute",
-        title: "iOS-Entwickler · Mercedes-Benz",
-        body: "Apps und Features für die mobile Welt eines großen Herstellers — solide, teamförmig, produktnah.",
-      },
-      {
-        when: "4 Jahre",
-        title: "solutio / charly",
-        body: "iPad-Apps für Zahnarztpraxen. Nähe zu Praxisalltag, Abrechnung und den Menschen hinter dem Stuhl.",
-      },
-      {
-        when: "Nebenbei",
-        title: "KI-Bots & Automatisierung",
-        body: "Side-Hustle: Agenten, Shortcuts, kleine Systeme, die Arbeit abnehmen — inkl. der Teile, die kaputtgehen.",
-      },
-      {
-        when: "Schreiben",
-        title: "Der Tschechen Jahn",
-        body: "Ein Memoir / True-Crime-Stoff aus Berlin der 80er. Zurückhaltend, menschlich — kein Voyeurismus.",
+        title: "Akai MPC",
+        body: "Old-school-Hip-Hop in der freien Zeit, jetzt auf einem Akai MPC Key 37.",
       },
     ],
     contactTitle: "Kontakt",
@@ -112,31 +112,31 @@ export const about = {
   },
   en: {
     title: "About",
-    description: "A short note on Daniel Riewe — iOS, practice IT, AI, and writing.",
+    description: "A short note on Daniel Riewe — Berlin, hip-hop, Nintendo, Atari, an Akai MPC.",
     eyebrow: "About",
-    headline: "A brief path through work and life",
+    headline: "Red cap, yellow shirt, the sea behind",
     intro:
-      "I’m 51, live in the Stuttgart region (Holzgerlingen and nearby), and work as an iOS developer at Mercedes-Benz. Craft is the day job; beside it there is room for experiments and for stories that insist on being told.",
+      "The guy in the red cap by the sea. Into the Apple world because Atari went bankrupt. Hip-hop, Nintendo, and an MPC come with that — not a résumé.",
     timeline: [
       {
-        when: "Now",
-        title: "iOS developer · Mercedes-Benz",
-        body: "Apps and features in the mobile world of a large manufacturer — solid, team-shaped, close to the product.",
+        when: "Berlin",
+        title: "Hip-hop as a teenager",
+        body: "Hip-hop in Berlin, on Cubase then. Direct-to-disk and MIDI.",
       },
       {
-        when: "4 years",
-        title: "solutio / charly",
-        body: "iPad apps for dental practices. Close to daily practice life, billing, and the people behind the chair.",
+        when: "Nintendo",
+        title: "Consoles that ran in Germany",
+        body: "As a kid, imported and modded consoles so they would run here. One of the first small businesses. Would rather play Nintendo when his head is full.",
       },
       {
-        when: "On the side",
-        title: "AI bots & automation",
-        body: "Side hustle: agents, Shortcuts, small systems that take work off your plate — including the parts that break.",
+        when: "Atari",
+        title: "Falcon 030 in a rack",
+        body: "Saved for two years for an Atari Falcon 030, then put it in a 19-inch rack. Hardware and system from the inside.",
       },
       {
-        when: "Writing",
-        title: "Der Tschechen Jahn",
-        body: "A memoir / true-crime thread from 1980s Berlin. Restrained, human — not voyeuristic.",
+        when: "Today",
+        title: "Akai MPC",
+        body: "Old-school hip-hop in free time, now on an Akai MPC Key 37.",
       },
     ],
     contactTitle: "Contact",
@@ -147,17 +147,17 @@ export const about = {
 
 export const illustrations = {
   portrait: {
-    src: "/images/daniel-illustration-portrait.webp",
+    src: "/images/author-manga.jpg",
     alt: {
       de: "Illustration einer Person mit roter Kappe, runder Brille und gelbem Shirt am Strand. Kein Foto.",
       en: "Illustration of a person in a red cap, round glasses, and a yellow shirt at the beach. Not a photograph.",
     },
   },
   beach: {
-    src: "/images/daniel-illustration-beach.webp",
+    src: "/images/banner-workbench-manga.png",
     alt: {
-      de: "Illustration: Strand, alter Macintosh und ein Akai MPC auf einem Tisch. Kein Foto.",
-      en: "Illustration: a beach, a vintage Macintosh, and an Akai MPC on a table. Not a photograph.",
+      de: "Illustration: Strand, Holztisch mit Akai MPC, klassischem Macintosh und roter Kappe. Kein Foto.",
+      en: "Illustration: a beach, a wooden table with an Akai MPC, a classic Macintosh, and a red cap. Not a photograph.",
     },
   },
 };
@@ -166,9 +166,9 @@ export const hobby = {
   de: {
     title: "Nebenbei",
     body: [
-      "Nintendo, wenn der Kopf voll ist.",
-      "Musik mache ich selbst: Old-school-Hip-Hop auf einem Akai MPC.",
-      "Kein Label, kein Plan. Pads, und fertig.",
+      "Lieber Nintendo, wenn der Kopf voll ist.",
+      "Als Teenager Hip-Hop in Berlin, damals mit Cubase.",
+      "Heute dasselbe, Old-school, auf einem Akai MPC Key 37.",
     ],
     trackTitle: "Hip-Hop",
     trackLabel: "Hörprobe",
@@ -177,9 +177,9 @@ export const hobby = {
   en: {
     title: "On the side",
     body: [
-      "Nintendo when my head is full.",
-      "I make the music myself: old-school hip-hop on an Akai MPC.",
-      "No label, no plan. Pads, and that’s it.",
+      "Would rather play Nintendo when my head is full.",
+      "Hip-hop in Berlin as a teenager, on Cubase then.",
+      "Same thing now, old-school, on an Akai MPC Key 37.",
     ],
     trackTitle: "Hip-Hop",
     trackLabel: "Listen",
