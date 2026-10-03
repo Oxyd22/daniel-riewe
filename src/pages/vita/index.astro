@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import HobbyBlock from "../../components/HobbyBlock.astro";
 import { about, ui, site, alternatePath } from "../../i18n/content";
 
 const lang = "de" as const;
@@ -30,6 +31,7 @@ const u = ui[lang];
           ))
         }
       </ul>
+      <HobbyBlock lang={lang} showBeach />
       <section class="section" aria-labelledby="contact-heading">
         <h2 id="contact-heading">{t.contactTitle}</h2>
         <p>{t.contactBody}</p>

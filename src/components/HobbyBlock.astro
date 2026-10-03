@@ -1,0 +1,30 @@
+---
+import { hobby, illustrations, type Lang } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+  showBeach?: boolean;
+}
+
+const { lang, showBeach = false } = Astro.props;
+const t = hobby[lang];
+const beach = illustrations.beach;
+---
+<section class="section hobby" aria-labelledby="hobby-heading">
+  <h2 id="hobby-heading">{t.title}</h2>
+  {t.body.map((paragraph) => <p>{paragraph}</p>)}
+  {
+    showBeach && (
+      <figure class="illus illus-wide">
+        <img src={beach.src} alt={beach.alt[lang]} width="1500" height="500" />
+        <figcaption>{t.illustrationNote}</figcaption>
+      </figure>
+    )
+  }
+  <p class="hobby-track">
+    {t.trackLabel}: {t.trackTitle}
+  </p>
+  <audio class="hobby-audio" controls preload="none" src="/audio/hip-hop.mp3">
+    {t.trackTitle}
+  </audio>
+</section>

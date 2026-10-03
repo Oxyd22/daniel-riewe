@@ -834,3 +834,41 @@ h3 {
 .mac-window .section {
   margin-top: 2rem;
 }
+
+.illus {
+  margin: 0;
+}
+
+.illus img {
+  display: block;
+  width: min(280px, 78vw);
+  height: auto;
+  border: 2px solid #1a1a1a;
+  box-shadow: 3px 3px 0 #1a1a1a;
+  background: #fff;
+}
+
+.illus figcaption,
+.hobby-track {
+  margin: 0.45rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ink-mute);
+}
+
+.illus-wide {
+  margin-top: var(--space-3);
+}
+
+.illus-wide img {
+  width: min(920px, 100%);
+}
+
+.hobby p {
+  max-width: 62ch;
+}
+
+.hobby-audio {
+  display: block;
+  width: min(420px, 100%);
+  margin-top: 0.6rem;
+}

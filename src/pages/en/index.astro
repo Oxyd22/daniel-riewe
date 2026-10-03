@@ -1,11 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PhotoPlaceholder from "../../components/PhotoPlaceholder.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
-import { cardMedia, home, projects, alternatePath, homeProjectOrder } from "../../i18n/content";
+import HobbyBlock from "../../components/HobbyBlock.astro";
+import { cardMedia, home, projects, alternatePath, homeProjectOrder, illustrations, hobby } from "../../i18n/content";
 
 const lang = "en" as const;
 const t = home[lang];
+const portrait = illustrations.portrait;
+const note = hobby[lang].illustrationNote;
 ---
 <BaseLayout
   lang={lang}
@@ -25,10 +27,13 @@ const t = home[lang];
           <a class="btn btn-ghost" href="/en/projects/">{t.ctaProjects}</a>
         </div>
       </div>
-      <div class="hero-photo">
-        <PhotoPlaceholder lang={lang} />
-      </div>
+      <figure class="hero-photo illus">
+        <img src={portrait.src} alt={portrait.alt[lang]} width="848" height="1216" />
+        <figcaption>{note}</figcaption>
+      </figure>
     </section>
+
+    <HobbyBlock lang={lang} />
 
     <section class="section" aria-labelledby="projects-heading">
       <div class="section-head">

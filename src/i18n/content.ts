@@ -145,6 +145,48 @@ export const about = {
   },
 };
 
+export const illustrations = {
+  portrait: {
+    src: "/images/daniel-illustration-portrait.webp",
+    alt: {
+      de: "Illustration einer Person mit roter Kappe, runder Brille und gelbem Shirt am Strand. Kein Foto.",
+      en: "Illustration of a person in a red cap, round glasses, and a yellow shirt at the beach. Not a photograph.",
+    },
+  },
+  beach: {
+    src: "/images/daniel-illustration-beach.webp",
+    alt: {
+      de: "Illustration: Strand, alter Macintosh und ein Akai MPC auf einem Tisch. Kein Foto.",
+      en: "Illustration: a beach, a vintage Macintosh, and an Akai MPC on a table. Not a photograph.",
+    },
+  },
+};
+
+export const hobby = {
+  de: {
+    title: "Nebenbei",
+    body: [
+      "Nintendo, wenn der Kopf voll ist.",
+      "Musik mache ich selbst: Old-school-Hip-Hop auf einem Akai MPC.",
+      "Kein Label, kein Plan. Pads, und fertig.",
+    ],
+    trackTitle: "Hip-Hop",
+    trackLabel: "Hörprobe",
+    illustrationNote: "Illustration, kein Foto.",
+  },
+  en: {
+    title: "On the side",
+    body: [
+      "Nintendo when my head is full.",
+      "I make the music myself: old-school hip-hop on an Akai MPC.",
+      "No label, no plan. Pads, and that’s it.",
+    ],
+    trackTitle: "Hip-Hop",
+    trackLabel: "Listen",
+    illustrationNote: "Illustration, not a photograph.",
+  },
+};
+
 export type ProjectSlug =
   | "ai-kalorien"
   | "teslaviewer"
