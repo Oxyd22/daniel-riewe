@@ -6,8 +6,8 @@
   --ink: #2a2520;
   --ink-soft: #5c534a;
   --ink-mute: #7a7166;
-  --accent: #9a4e2c;
-  --accent-hover: #7d3d22;
+  --accent: #c1272d;
+  --accent-hover: #8e1c22;
   --accent-soft: #c4785a;
   --line: #d9cfbf;
   --focus: #2a2520;
@@ -54,10 +54,7 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--ink);
-  background:
-    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(196, 120, 90, 0.12), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(235, 228, 214, 0.9), transparent 45%),
-    var(--paper);
+  background: #b4b4b4;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -274,15 +271,15 @@ h3 {
 .photo-frame {
   width: min(220px, 70vw);
   aspect-ratio: 1;
-  border-radius: 50%;
-  background: linear-gradient(160deg, var(--paper-deep), #e2d5c4);
-  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--paper-deep);
+  border: 2px solid #1a1a1a;
+  box-shadow: inset 0 0 0 6px #d7d7d7, 3px 3px 0 #1a1a1a;
   display: grid;
   place-items: center;
   color: var(--ink-mute);
   text-align: center;
   padding: 1.5rem;
-  box-shadow: 0 12px 40px rgba(42, 37, 32, 0.06);
 }
 
 .photo-frame svg {
@@ -357,40 +354,73 @@ h3 {
 
 .project-grid {
   display: grid;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 720px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media (min-width: 1040px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .project-card {
   background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.35rem 1.4rem;
+  border: 2px solid #1a1a1a;
+  border-radius: 2px;
+  padding: 0;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
-  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  overflow: hidden;
+  box-shadow: 3px 3px 0 #1a1a1a;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .project-card:hover {
-  border-color: #c9bba8;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(42, 37, 32, 0.06);
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #1a1a1a;
   color: inherit;
 }
 
+.card-shot {
+  display: block;
+  aspect-ratio: 16 / 9;
+  background: #1a1a1a;
+  border-bottom: 2px solid #1a1a1a;
+  overflow: hidden;
+}
+
+.card-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-shot img.pixel {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.75rem 0.85rem 0.9rem;
+  min-height: 0;
+}
+
 .project-card .tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -403,7 +433,8 @@ h3 {
 .project-card p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: 0.98rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
   flex: 1;
 }
 
@@ -671,4 +702,135 @@ h3 {
 
 .project-section .section-links a:hover {
   color: var(--accent);
+}
+
+/* Macintosh window + a thin Nintendo color strip. Scoped so Mars Patrol stays dark. */
+.mac-desktop {
+  min-height: 100vh;
+  padding: 0.85rem 0.85rem 1.5rem;
+  background:
+    linear-gradient(#c8c8c8 1px, transparent 1px),
+    linear-gradient(90deg, #c8c8c8 1px, transparent 1px),
+    #b4b4b4;
+  background-size: 8px 8px, 8px 8px, auto;
+}
+
+.nes-strip {
+  display: flex;
+  max-width: 76rem;
+  margin: 0 auto 0.55rem;
+  height: 8px;
+  border: 2px solid #1a1a1a;
+}
+
+.nes-strip span {
+  flex: 1;
+}
+
+.nes-strip span:nth-child(1) { background: #e60012; }
+.nes-strip span:nth-child(2) { background: #f8d800; }
+.nes-strip span:nth-child(3) { background: #00a651; }
+.nes-strip span:nth-child(4) { background: #0057b8; }
+
+.mac-window {
+  max-width: 76rem;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 2px solid #1a1a1a;
+  box-shadow: 4px 4px 0 #1a1a1a;
+  min-height: calc(100vh - 2.5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.mac-titlebar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: stretch;
+  gap: 0.35rem;
+  background-color: #d5d5d5;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #ececec 0 1px,
+    #cfcfcf 1px 3px
+  );
+  border-bottom: 2px solid #1a1a1a;
+  backdrop-filter: none;
+}
+
+.mac-dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 0.7rem;
+}
+
+.mac-dots i {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #1a1a1a;
+  display: block;
+}
+
+.mac-dots i:nth-child(1) { background: #e60012; }
+.mac-dots i:nth-child(2) { background: #f8d800; }
+.mac-dots i:nth-child(3) { background: #00a651; }
+
+.mac-window .header-inner {
+  flex: 1;
+  padding-left: 0.35rem;
+}
+
+.mac-window .site-header {
+  background: transparent;
+  border-bottom: 0;
+}
+
+.mac-window .lang-switch {
+  border-radius: 2px;
+  border: 2px solid #1a1a1a;
+}
+
+.mac-window .lang-switch a[aria-current="true"] {
+  background: #1a1a1a;
+  color: #f6f1e8;
+}
+
+.mac-window .btn {
+  border-radius: 2px;
+  border: 2px solid #1a1a1a;
+  box-shadow: 2px 2px 0 #1a1a1a;
+}
+
+.mac-window .btn-primary {
+  background: #e60012;
+  color: #fffaf5;
+}
+
+.mac-window .btn-primary:hover {
+  background: #b0000c;
+  color: #fffaf5;
+}
+
+.mac-window .btn-ghost {
+  background: #f4f1ea;
+}
+
+.mac-window .site-main {
+  flex: 1;
+}
+
+.mac-window .site-footer {
+  background: #e4ddd0;
+  border-top: 2px solid #1a1a1a;
+}
+
+.mac-window .container {
+  padding-top: 1.75rem;
+}
+
+.mac-window .section {
+  margin-top: 2rem;
 }

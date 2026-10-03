@@ -4,14 +4,24 @@ import { ui, type Lang } from "../i18n/content";
 interface Props {
   lang: Lang;
   alternatePath: string;
+  chrome?: "plain" | "mac";
 }
 
-const { lang, alternatePath } = Astro.props;
+const { lang, alternatePath, chrome = "plain" } = Astro.props;
 const t = ui[lang];
 const path = Astro.url.pathname;
 ---
 <a class="skip-link" href="#main">{t.skip}</a>
-<header class="site-header">
+<header class:list={["site-header", { "mac-titlebar": chrome === "mac" }]}>
+  {
+    chrome === "mac" && (
+      <div class="mac-dots" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+      </div>
+    )
+  }
   <div class="header-inner">
     <a class="brand" href={lang === "de" ? "/" : "/en/"}>{lang === "de" ? "Daniel Riewe" : "Daniel Riewe"}</a>
     <nav class="nav" aria-label={lang === "de" ? "Hauptnavigation" : "Main"}>

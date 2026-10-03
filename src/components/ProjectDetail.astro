@@ -1,6 +1,7 @@
 ---
 import type { Lang, ProjectSlug } from "../i18n/content";
 import { projects, ui } from "../i18n/content";
+import ProjectCard from "./ProjectCard.astro";
 
 interface Props {
   lang: Lang;
@@ -11,6 +12,9 @@ interface Props {
     tag: string;
     title: string;
     summary: string;
+    image: string;
+    imageAlt: string;
+    pixel?: boolean;
   }[];
 }
 
@@ -91,12 +95,15 @@ const projectsHref = lang === "de" ? "/projekte/" : "/en/projects/";
           <h2>{lang === "de" ? "Die Apps" : "The apps"}</h2>
           <div class="project-grid">
             {related.map((item) => (
-              <a class="project-card" href={item.href}>
-                <span class="tag">{item.tag}</span>
-                <h3>{item.title}</h3>
-                <p>{item.summary}</p>
-                <span class="more">{u.readMore} →</span>
-              </a>
+              <ProjectCard
+                href={item.href}
+                tag={item.tag}
+                title={item.title}
+                summary={item.summary}
+                image={item.image}
+                imageAlt={item.imageAlt}
+                pixel={item.pixel}
+              />
             ))}
           </div>
         </section>

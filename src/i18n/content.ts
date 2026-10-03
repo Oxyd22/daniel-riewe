@@ -230,7 +230,7 @@ export const projects: Record<
     de: {
       title: "AI Kalorien",
       tag: "iOS Shortcut",
-      card: "Kostenloser Kurzbefehl: Foto, Text, Barcode oder Etikett → kcal & Makros in Apple Health. Ohne Abo, ohne eigenes Konto.",
+      card: "Kostenloser Kurzbefehl: Foto, Text, Barcode oder Etikett werden zu kcal und Makros in Apple Health.",
       description:
         "Kostenloser iOS-Kurzbefehl von Daniel Riewe: Mahlzeiten per Foto, Text, Barcode oder Etikett erfassen und in Apple Health speichern.",
       body: [
@@ -257,7 +257,7 @@ export const projects: Record<
     en: {
       title: "AI Kalorien",
       tag: "iOS Shortcut",
-      card: "Free Shortcut: photo, text, barcode, or label → calories & macros in Apple Health. No subscription, no account of mine.",
+      card: "Free Shortcut: a photo, text, barcode, or label becomes calories and macros in Apple Health.",
       description:
         "Free iOS Shortcut by Daniel Riewe: log meals via photo, text, barcode, or label into Apple Health.",
       body: [
@@ -287,7 +287,7 @@ export const projects: Record<
     de: {
       title: "TeslaViewer",
       tag: "macOS",
-      card: "Schlanke macOS-App: sechs Tesla-Dashcam-/Sentry-Feeds synchron im 3×2-Grid. Öffentliches Repo — nicht notarisiert, kein App Store.",
+      card: "Schlanke macOS-App: sechs Tesla-Dashcam- und Sentry-Feeds synchron im 3×2-Raster.",
       description:
         "TeslaViewer von Daniel Riewe — macOS-App zum synchronen Ansehen von Tesla Dashcam- und Sentry-Aufnahmen.",
       body: [
@@ -311,7 +311,7 @@ export const projects: Record<
     en: {
       title: "TeslaViewer",
       tag: "macOS",
-      card: "Lean macOS app: six Tesla dashcam/Sentry feeds in sync on a 3×2 grid. Public repo — not notarized, not on the App Store.",
+      card: "Lean macOS app: six Tesla dashcam and Sentry feeds in sync on a 3×2 grid.",
       description:
         "TeslaViewer by Daniel Riewe — macOS app for synchronized Tesla dashcam and Sentry playback.",
       body: [
@@ -338,7 +338,7 @@ export const projects: Record<
     de: {
       title: "BillBuddy",
       tag: "iOS",
-      card: "iOS-App zum Teilen von Rechnungen. Privates Repo — hier kein Source-Link, kein erfundener Store-Eintrag.",
+      card: "iOS-App zum Teilen von Rechnungen, ohne öffentlichen Quellcode und ohne Store-Link.",
       description:
         "BillBuddy von Daniel Riewe — iOS-App zum Teilen von Rechnungen.",
       body: [
@@ -362,7 +362,7 @@ export const projects: Record<
     en: {
       title: "BillBuddy",
       tag: "iOS",
-      card: "iOS app for splitting bills. Private repo — no source link here, no invented store listing.",
+      card: "iOS app for splitting bills, with no public source and no store link.",
       description: "BillBuddy by Daniel Riewe — iOS app for splitting bills.",
       body: [
         "BillBuddy is an iOS app for splitting bills — pragmatic, without a storefront on this page.",
@@ -388,7 +388,7 @@ export const projects: Record<
     de: {
       title: "LMMHoroskop",
       tag: "iOS",
-      card: "iOS-Horoskop mit lokalem Apple Foundation Model. Privates Repo — Support separat.",
+      card: "iOS-Horoskop mit lokalem Apple Foundation Model; das Repo bleibt privat.",
       description:
         "LMMHoroskop von Daniel Riewe — iOS-Horoskop mit lokalem Apple Foundation Model.",
       body: [
@@ -412,7 +412,7 @@ export const projects: Record<
     en: {
       title: "LMMHoroskop",
       tag: "iOS",
-      card: "iOS horoscope using Apple’s on-device Foundation Model. Private repo — support separately.",
+      card: "iOS horoscope using Apple’s on-device Foundation Model; the repo stays private.",
       description:
         "LMMHoroskop by Daniel Riewe — iOS horoscope with Apple’s local Foundation Model.",
       body: [
@@ -442,7 +442,7 @@ export const projects: Record<
     de: {
       title: "NovaPowerLogger",
       tag: "macOS",
-      card: "macOS-Menüleisten-App für Solar-/Wechselrichter-Daten. Privates Repo — kein Source-Link hier.",
+      card: "macOS-Menüleisten-App für Solar- und Wechselrichterdaten, ohne öffentlichen Quellcode.",
       description:
         "NovaPowerLogger von Daniel Riewe — macOS-Menüleiste für Solar- und Wechselrichter-Daten.",
       body: [
@@ -454,7 +454,7 @@ export const projects: Record<
     en: {
       title: "NovaPowerLogger",
       tag: "macOS",
-      card: "macOS menu-bar app for solar/inverter data. Private repo — no source link here.",
+      card: "macOS menu-bar app for solar and inverter data, with no public source.",
       description:
         "NovaPowerLogger by Daniel Riewe — macOS menu bar for solar and inverter data.",
       body: [
@@ -469,7 +469,7 @@ export const projects: Record<
     de: {
       title: "Mars Patrol",
       tag: "iOS & macOS",
-      card: "Arcade-Side-Scroller: Cybertruck auf dem Mars — Tesla-/SpaceX-/Grok-Motive, Grok DE/EN. Nativ iOS & macOS. Fan-Projekt, privates Repo.",
+      card: "Arcade-Side-Scroller: Cybertruck auf dem Mars, nativ auf iOS und macOS.",
       description:
         "Mars Patrol von Daniel Riewe — inoffizielles Fan-Arcade (SpriteKit) mit Cybertruck, Grok DE/EN und echtem macOS-Screenshot.",
       body: [
@@ -480,7 +480,7 @@ export const projects: Record<
     en: {
       title: "Mars Patrol",
       tag: "iOS & macOS",
-      card: "Arcade side-scroller: Cybertruck on Mars — Tesla/SpaceX/Grok motifs, Grok DE/EN. Native iOS & macOS. Fan project, private repo.",
+      card: "Arcade side-scroller: a Cybertruck on Mars, native on iOS and macOS.",
       description:
         "Mars Patrol by Daniel Riewe — unofficial fan arcade (SpriteKit) with Cybertruck, Grok DE/EN, and a real macOS screenshot.",
       body: [
@@ -494,7 +494,7 @@ export const projects: Record<
     de: {
       title: "Der Tschechen Jahn",
       tag: "Buch / Memoir",
-      card: "Memoir und True Crime aus Berlin der 80er. Trauma-bewusst, zurückhaltend — kein Spektakel.",
+      card: "Memoir und True Crime aus Berlin der 80er, zurückhaltend und ohne Spektakel.",
       description:
         "Der Tschechen Jahn — Memoir / True Crime Berlin 80er von Daniel Riewe. Menschlich und zurückhaltend.",
       body: [
@@ -509,7 +509,7 @@ export const projects: Record<
     en: {
       title: "Der Tschechen Jahn",
       tag: "Book / memoir",
-      card: "Memoir and true crime from 1980s Berlin. Trauma-aware, restrained — not a spectacle.",
+      card: "Memoir and true crime from 1980s Berlin, restrained and not a spectacle.",
       description:
         "Der Tschechen Jahn — memoir / true crime, 1980s Berlin, by Daniel Riewe. Human and restrained.",
       body: [
@@ -527,7 +527,7 @@ export const projects: Record<
     de: {
       title: "@Jesaja auf X",
       tag: "Social / Content",
-      card: "Öffentliches Profil: Agenten in Produktion, Anti-Hype, ehrlich über das, was bricht.",
+      card: "Öffentliches Profil auf X: Agenten in Produktion, Anti-Hype, ehrlich über Brüche.",
       description:
         "Daniel Riewe als @Jesaja auf X — Content zu KI-Agenten, Automatisierung und dem, was in Produktion wirklich läuft.",
       body: [
@@ -543,7 +543,7 @@ export const projects: Record<
     en: {
       title: "@Jesaja on X",
       tag: "Social / content",
-      card: "Public profile: agents in production, anti-hype, honest about what breaks.",
+      card: "Public profile on X: agents in production, anti-hype, honest about what breaks.",
       description:
         "Daniel Riewe as @Jesaja on X — writing on AI agents, automation, and what actually runs in production.",
       body: [
@@ -562,7 +562,7 @@ export const projects: Record<
     de: {
       title: "Praxis-IT & Zahnarztwebsites",
       tag: "Web & IT",
-      card: "Websites und IT für Zahnarztpraxen — ruhig, vertrauenswürdig; öffentliche Entwürfe verlinkt.",
+      card: "Websites und IT für Zahnarztpraxen, mit öffentlichen Entwürfen zum Anschauen.",
       description:
         "Daniel Riewe: Websites und IT für Zahnarztpraxen — inkl. öffentlicher Website-Entwürfe.",
       body: [
@@ -607,7 +607,7 @@ export const projects: Record<
     en: {
       title: "Practice IT & dental websites",
       tag: "Web & IT",
-      card: "Websites and IT for dental practices — calm, trustworthy; public drafts linked.",
+      card: "Websites and IT for dental practices, with public drafts you can open.",
       description:
         "Daniel Riewe: websites and IT for dental practices — including public website drafts.",
       body: [
@@ -655,7 +655,7 @@ export const projects: Record<
     de: {
       title: "Eigene Apps",
       tag: "iOS & macOS",
-      card: "App-Übersicht: AI Kalorien, TeslaViewer, BillBuddy, LMMHoroskop, NovaPowerLogger, MarsPatrol — ehrlich, ohne Fake-Store-Links.",
+      card: "Übersicht der eigenen Apps, ehrlich und ohne erfundene Store-Links.",
       description:
         "Persönliche iOS- und macOS-Apps von Daniel Riewe — Übersicht mit Links zu den Projektseiten.",
       body: [
@@ -666,7 +666,7 @@ export const projects: Record<
     en: {
       title: "Personal apps",
       tag: "iOS & macOS",
-      card: "App overview: AI Kalorien, TeslaViewer, BillBuddy, LMMHoroskop, NovaPowerLogger, MarsPatrol — honest, no fake store links.",
+      card: "Overview of the personal apps, honest and without invented store links.",
       description:
         "Personal iOS and macOS apps by Daniel Riewe — overview with links to project pages.",
       body: [
@@ -683,7 +683,7 @@ export const projects: Record<
     de: {
       title: "AI Harness Context",
       tag: "KI / Agent-Harness",
-      card: "Experimente mit Context, Content und Multi-Agent-Arbeit — F.R.I.D.A.Y. → jarvis → edith, plus offenes Protokoll und Blueprints.",
+      card: "Experimente mit Context und Multi-Agent-Arbeit, von F.R.I.D.A.Y. über jarvis bis edith.",
       description:
         "AI Harness Context von Daniel Riewe — Experimente rund um AI Context Studio, Multi-Agent-Protokoll und projekt-lokale Blueprints.",
       body: [
@@ -758,7 +758,7 @@ export const projects: Record<
     en: {
       title: "AI Harness Context",
       tag: "AI / agent harness",
-      card: "Experiments with context, content, and multi-agent work — F.R.I.D.A.Y. → jarvis → edith, plus an open protocol and blueprints.",
+      card: "Experiments with context and multi-agent work, from F.R.I.D.A.Y. through jarvis to edith.",
       description:
         "AI Harness Context by Daniel Riewe — experiments around AI Context Studio, a multi-agent protocol, and project-local blueprints.",
       body: [
@@ -829,6 +829,96 @@ export const projects: Record<
           href: "https://github.com/Oxyd22/jarvis-assets",
         },
       ],
+    },
+  },
+};
+
+export const cardMedia: Record<
+  ProjectSlug,
+  { src: string; alt: Record<Lang, string>; pixel?: boolean }
+> = {
+  "ai-kalorien": {
+    src: "/images/ai-kalorien-card.webp",
+    alt: {
+      de: "Screenshot des Kurzbefehls: Tageskalorien eingetragen, mit Fortschritt in Apple Health",
+      en: "Shortcut screenshot: daily calories logged, with progress toward Apple Health",
+    },
+  },
+  teslaviewer: {
+    src: "/images/teslaviewer-card.webp",
+    pixel: true,
+    alt: {
+      de: "Pixelbild eines Fensters mit sechs Kamera-Kacheln im 3×2-Raster",
+      en: "Pixel illustration of a window with six camera tiles in a 3×2 grid",
+    },
+  },
+  billbuddy: {
+    src: "/images/billbuddy-card.webp",
+    pixel: true,
+    alt: {
+      de: "Pixelbild einer Rechnung, die in zwei Stapel geteilt wird",
+      en: "Pixel illustration of a receipt split into two stacks",
+    },
+  },
+  "lmm-horoskop": {
+    src: "/images/lmm-horoskop-card.webp",
+    pixel: true,
+    alt: {
+      de: "Pixelbild eines Nachthimmels mit Mond über einem kleinen Bildschirm",
+      en: "Pixel illustration of a night sky and moon above a small screen",
+    },
+  },
+  "nova-power-logger": {
+    src: "/images/nova-power-logger-card.webp",
+    pixel: true,
+    alt: {
+      de: "Pixelbild einer Menüleiste mit Sonne und grünen Solar-Balken",
+      en: "Pixel illustration of a menu bar with a sun and green solar bars",
+    },
+  },
+  "mars-patrol": {
+    src: "/images/mars-patrol-card.webp",
+    alt: {
+      de: "Titelbild von Mars Patrol: Cybertruck, Startrampe und Marslandschaft",
+      en: "Mars Patrol title art: Cybertruck, launch tower, and Martian landscape",
+    },
+  },
+  "tschechen-jahn": {
+    src: "/images/tschechen-jahn-card.webp",
+    alt: {
+      de: "Nachtstraße mit Käfer und Laternen in lila-rosa Licht",
+      en: "Night street with a Beetle and street lamps in purple-pink light",
+    },
+  },
+  jesaja: {
+    src: "/images/jesaja-card.webp",
+    pixel: true,
+    alt: {
+      de: "Pixelbild eines Terminals mit Sprechblasen, ohne Porträt",
+      en: "Pixel illustration of a terminal and speech bubbles, no portrait",
+    },
+  },
+  "praxis-it": {
+    src: "/images/praxis-it-card.webp",
+    alt: {
+      de: "Ausschnitt eines Praxis-Website-Entwurfs: blaues Behandlungszimmer",
+      en: "Crop of a practice-website draft: a blue treatment room",
+    },
+  },
+  "ios-apps": {
+    src: "/images/ios-apps-card.webp",
+    pixel: true,
+    alt: {
+      de: "Pixel-Raster aus sechs farbigen App-Kacheln",
+      en: "Pixel grid of six colored app tiles",
+    },
+  },
+  "ai-harness-context": {
+    src: "/images/ai-harness-context-card.webp",
+    pixel: true,
+    alt: {
+      de: "Pixelbild von drei verbundenen Knoten für Agenten-Experimente",
+      en: "Pixel illustration of three connected nodes for agent experiments",
     },
   },
 };

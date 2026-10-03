@@ -2,11 +2,10 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PhotoPlaceholder from "../components/PhotoPlaceholder.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import { home, projects, ui, alternatePath, homeProjectOrder } from "../i18n/content";
+import { cardMedia, home, projects, alternatePath, homeProjectOrder } from "../i18n/content";
 
 const lang = "de" as const;
 const t = home[lang];
-const u = ui[lang];
 ---
 <BaseLayout
   lang={lang}
@@ -42,13 +41,16 @@ const u = ui[lang];
         {
           homeProjectOrder.map((slug) => {
             const p = projects[slug][lang];
+            const media = cardMedia[slug];
             return (
               <ProjectCard
                 href={projects[slug].paths.de}
                 tag={p.tag}
                 title={p.title}
                 summary={p.card}
-                moreLabel={u.readMore}
+                image={media.src}
+                imageAlt={media.alt[lang]}
+                pixel={media.pixel}
               />
             );
           })

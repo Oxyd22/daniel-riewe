@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import ProjectDetail from "../../../components/ProjectDetail.astro";
-import { projects, alternatePath, appSlugs } from "../../../i18n/content";
+import { cardMedia, projects, alternatePath, appSlugs } from "../../../i18n/content";
 
 const lang = "de" as const;
 const slug = "ios-apps" as const;
@@ -11,6 +11,9 @@ const related = appSlugs.map((s) => ({
   tag: projects[s][lang].tag,
   title: projects[s][lang].title,
   summary: projects[s][lang].card,
+  image: cardMedia[s].src,
+  imageAlt: cardMedia[s].alt[lang],
+  pixel: cardMedia[s].pixel,
 }));
 ---
 <BaseLayout

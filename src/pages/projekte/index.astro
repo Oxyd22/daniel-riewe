@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
-import { projectsIndex, projects, ui, alternatePath, projectsIndexOrder } from "../../i18n/content";
+import { cardMedia, projectsIndex, projects, ui, alternatePath, projectsIndexOrder } from "../../i18n/content";
 
 const lang = "de" as const;
 const t = projectsIndex[lang];
@@ -23,13 +23,16 @@ const u = ui[lang];
       {
         projectsIndexOrder.map((slug) => {
           const p = projects[slug][lang];
+          const media = cardMedia[slug];
           return (
             <ProjectCard
               href={projects[slug].paths.de}
               tag={p.tag}
               title={p.title}
               summary={p.card}
-              moreLabel={u.readMore}
+              image={media.src}
+              imageAlt={media.alt[lang]}
+              pixel={media.pixel}
             />
           );
         })

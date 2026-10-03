@@ -4,13 +4,27 @@ interface Props {
   tag: string;
   title: string;
   summary: string;
-  moreLabel: string;
+  image: string;
+  imageAlt: string;
+  pixel?: boolean;
 }
-const { href, tag, title, summary, moreLabel } = Astro.props;
+const { href, tag, title, summary, image, imageAlt, pixel = false } = Astro.props;
 ---
 <a class="project-card" href={href}>
-  <span class="tag">{tag}</span>
-  <h3>{title}</h3>
-  <p>{summary}</p>
-  <span class="more">{moreLabel} →</span>
+  <span class="card-shot">
+    <img
+      class:list={[{ pixel }]}
+      src={image}
+      alt={imageAlt}
+      width="960"
+      height="540"
+      loading="lazy"
+      decoding="async"
+    />
+  </span>
+  <span class="card-body">
+    <span class="tag">{tag}</span>
+    <h3>{title}</h3>
+    <p>{summary}</p>
+  </span>
 </a>

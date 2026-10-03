@@ -26,6 +26,8 @@ const {
   bodyClass,
 } = Astro.props;
 
+const macChrome = bodyClass !== "theme-mars";
+
 const fullTitle = title.includes(site.name) ? title : `${title} · ${site.name}`;
 const canonical = new URL(canonicalPath, site.url).toString();
 const alternate = new URL(alternatePath, site.url).toString();
@@ -64,12 +66,32 @@ const ogLocaleAlt = lang === "de" ? "en_US" : "de_DE";
     />
   </head>
   <body class:list={[bodyClass]}>
-    <div class="site-wrap">
-      <Header lang={lang} alternatePath={alternatePath} />
-      <main id="main" class="site-main">
-        <slot />
-      </main>
-      <Footer lang={lang} />
-    </div>
+    {
+      macChrome ? (
+        <div class="mac-desktop">
+          <div class="nes-strip" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+          <div class="mac-window">
+            <Header lang={lang} alternatePath={alternatePath} chrome="mac" />
+            <main id="main" class="site-main">
+              <slot />
+            </main>
+            <Footer lang={lang} />
+          </div>
+        </div>
+      ) : (
+        <div class="site-wrap">
+          <Header lang={lang} alternatePath={alternatePath} />
+          <main id="main" class="site-main">
+            <slot />
+          </main>
+          <Footer lang={lang} />
+        </div>
+      )
+    }
   </body>
 </html>
