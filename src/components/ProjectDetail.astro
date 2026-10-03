@@ -107,6 +107,99 @@ const projectsHref = lang === "de" ? "/projekte/" : "/en/projects/";
       )
     }
     {
+      p.flow && (
+        <section class="shortcut-block">
+          <h2>{p.flow.title}</h2>
+          <p>{p.flow.lead}</p>
+          <div class="shortcut-shots">
+            {p.flow.shots.map((shot) => (
+              <figure>
+                <img src={shot.src} alt={shot.alt} width="720" height="900" loading="lazy" decoding="async" />
+                <figcaption>{shot.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )
+    }
+    {
+      p.inputs && (
+        <section class="shortcut-block">
+          <h2>{p.inputs.title}</h2>
+          <p>{p.inputs.lead}</p>
+          <ul class="shortcut-inputs">
+            {p.inputs.items.map((item) => (
+              <li>
+                <div>
+                  <strong>{item.title}</strong>
+                  <span>{item.text}</span>
+                </div>
+                <span class="shortcut-tag">{item.tag}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+    {
+      p.points && (
+        <section class="shortcut-block">
+          <h2>{p.points.title}</h2>
+          <ul class="shortcut-points">
+            {p.points.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+    {
+      p.compare && (
+        <section class="shortcut-block">
+          <h2>{p.compare.title}</h2>
+          <p>{p.compare.lead}</p>
+          <div class="shortcut-table-wrap">
+            <table class="shortcut-compare">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">{p.compare.colProduct}</th>
+                  <th scope="col">{p.compare.colOther}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {p.compare.rows.map((row) => (
+                  <tr>
+                    <th scope="row">{row.label}</th>
+                    <td>{row.ours}</td>
+                    <td>{row.other}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="shortcut-fine">{p.compare.fine}</p>
+        </section>
+      )
+    }
+    {
+      p.underHood && (
+        <details class="shortcut-hood">
+          <summary>{p.underHood.summary}</summary>
+          <p>{p.underHood.body}</p>
+        </details>
+      )
+    }
+    {
+      p.install && (
+        <section class="shortcut-block shortcut-install">
+          <h2>{p.install.title}</h2>
+          <p>{p.install.sub}</p>
+          <p class="shortcut-fine">{p.install.fine}</p>
+        </section>
+      )
+    }
+    {
       related && related.length > 0 && (
         <section class="app-list" aria-label={lang === "de" ? "Apps" : "Apps"}>
           <h2>{lang === "de" ? "Die Apps" : "The apps"}</h2>

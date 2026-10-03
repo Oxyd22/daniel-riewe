@@ -793,3 +793,175 @@ h3 {
   width: min(420px, 100%);
   margin-top: 0.6rem;
 }
+
+.shortcut-block {
+  margin: var(--space-4) 0;
+}
+
+.shortcut-block h2 {
+  font-size: 1.35rem;
+  margin: 0 0 0.45rem;
+}
+
+.shortcut-block > p {
+  margin: 0 0 0.9rem;
+  color: var(--ink-soft);
+  font-size: 1.0625rem;
+}
+
+.shortcut-shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.shortcut-shots figure {
+  margin: 0;
+  background: rgba(255, 253, 246, 0.9);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.55rem;
+}
+
+.shortcut-shots img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: var(--sand);
+}
+
+.shortcut-shots figcaption {
+  margin: 0.45rem 0 0.15rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.shortcut-inputs,
+.shortcut-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.shortcut-inputs li,
+.shortcut-points li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 253, 246, 0.92);
+  color: var(--ink);
+  font-size: 1.0625rem;
+}
+
+.shortcut-inputs li div {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.shortcut-inputs strong {
+  color: var(--ink);
+}
+
+.shortcut-inputs span {
+  color: var(--ink-soft);
+}
+
+.shortcut-tag {
+  flex: 0 0 auto;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #14343c;
+  background: #b7ecf1;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+}
+
+.shortcut-points li {
+  display: block;
+}
+
+.shortcut-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.shortcut-compare {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 1rem;
+  background: rgba(255, 253, 246, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.shortcut-compare th,
+.shortcut-compare td {
+  padding: 0.7rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+  overflow-wrap: anywhere;
+  color: var(--ink);
+}
+
+.shortcut-compare thead th {
+  background: #ffe7b8;
+  font-size: 1rem;
+}
+
+.shortcut-compare td:nth-child(2),
+.shortcut-compare thead th:nth-child(2) {
+  background: #e5f7f4;
+}
+
+.shortcut-compare tr:last-child th,
+.shortcut-compare tr:last-child td {
+  border-bottom: none;
+}
+
+.shortcut-fine {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+.shortcut-hood {
+  margin: var(--space-3) 0 var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 246, 0.92);
+  padding: 0.2rem 1rem 0.2rem;
+}
+
+.shortcut-hood summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  color: var(--ink);
+  padding: 0.85rem 0;
+  min-height: 44px;
+}
+
+.shortcut-hood p {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+  font-size: 1.0625rem;
+}
+
+@media (max-width: 520px) {
+  .shortcut-shots {
+    grid-template-columns: 1fr;
+  }
+}

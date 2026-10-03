@@ -246,6 +246,17 @@ type ProjectSection = {
   links?: { label: string; href: string }[];
 };
 
+type ShortcutFlowShot = { src: string; caption: string; alt: string };
+type ShortcutInput = { title: string; text: string; tag: string };
+type ShortcutCompare = {
+  title: string;
+  lead: string;
+  colProduct: string;
+  colOther: string;
+  rows: { label: string; ours: string; other: string }[];
+  fine: string;
+};
+
 type ProjectCopy = {
   title: string;
   tag: string;
@@ -259,6 +270,12 @@ type ProjectCopy = {
   cta?: { label: string; href: string; external?: boolean };
   linksHeading?: string;
   links?: { label: string; href: string }[];
+  flow?: { title: string; lead: string; shots: ShortcutFlowShot[] };
+  inputs?: { title: string; lead: string; items: ShortcutInput[] };
+  points?: { title: string; items: string[] };
+  compare?: ShortcutCompare;
+  underHood?: { summary: string; body: string };
+  install?: { title: string; sub: string; fine: string };
 };
 
 export const projects: Record<
@@ -276,20 +293,88 @@ export const projects: Record<
       tag: "iOS Shortcut",
       card: "Kostenloser Kurzbefehl: Foto, Text, Barcode oder Etikett werden zu kcal und Makros in Apple Health.",
       description:
-        "Kostenloser iOS-Kurzbefehl von Daniel Riewe: Mahlzeiten per Foto, Text, Barcode oder Etikett erfassen und in Apple Health speichern.",
+        "Kostenloser iOS-Kurzbefehl: Foto, Text, Barcode oder Etikett werden zu kcal und Makros in Apple Health. Kein Account.",
       body: [
-        "AI Kalorien ist kein App-Store-Produkt mit Abo-Trichter — sondern ein iOS-/macOS-Kurzbefehl. Du erfasst eine Mahlzeit per Kamera, Mediathek, Text, Barcode (Open Food Facts) oder Nährwertetikett und speicherst Kalorien und Makros in Apple Health.",
-        "Privat gedacht: kein Tracker-Konto bei mir. Hybrid: KI dort, wo sie hilft; exakte Daten bei Verpackung. Orientierungshilfe, keine medizinische Beratung. Die ausführliche Landingpage und der Install-Link liegen unter ai-kalorien.pages.dev.",
+        "AI Kalorien ist kein App-Store-Produkt mit Abo — sondern ein iOS-/macOS-Kurzbefehl (App „Kurzbefehle“, iPhone oder iPad, v3). Foto, Text, Barcode oder Etikett, danach Apple Health. Kostenlos. Kein Account bei mir.",
+        "Vom Kurzbefehle-Menü bis eingetragen — ohne App-Store-Download.",
       ],
+      flow: {
+        title: "So fühlt sich’s an",
+        lead: "Vom Kurzbefehle-Menü bis eingetragen — ohne App-Store-Download.",
+        shots: [
+          {
+            src: "/images/ai-kalorien/menu.webp",
+            caption: "Menü",
+            alt: "Kurzbefehl-Menü auf dem iPhone",
+          },
+          {
+            src: "/images/ai-kalorien/text.webp",
+            caption: "Text",
+            alt: "Mahlzeit als Text beschreiben",
+          },
+          {
+            src: "/images/ai-kalorien/review.webp",
+            caption: "Review",
+            alt: "Prüfung vor dem Eintragen",
+          },
+          {
+            src: "/images/ai-kalorien/health.webp",
+            caption: "In Health",
+            alt: "Eingetragene Werte in Apple Health",
+          },
+        ],
+      },
+      inputs: {
+        title: "Fünf Wege rein",
+        lead: "AI wo’s hilft. Exakte Werte für Verpacktes.",
+        items: [
+          { title: "Kamera", text: "Teller knipsen — Café oder Zuhause.", tag: "AI" },
+          { title: "Fotobibliothek", text: "Später aus vorhandenen Fotos nachziehen.", tag: "AI" },
+          { title: "Text", text: "Mahlzeit beschreiben — schnell und diskret.", tag: "AI" },
+          { title: "Barcode", text: "Open Food Facts × Gramm — ohne Raten.", tag: "exakt" },
+          { title: "Etikett", text: "OCR der Nährwerttabelle + Portions-Mathe.", tag: "exakt" },
+        ],
+      },
+      points: {
+        title: "Warum kein Tracker-App",
+        items: [
+          "Kostenlos. Kein Abo-Funnel.",
+          "Privat. Kein Tracker-Account — Daten in Apple Health.",
+          "Hybrid. AI für Teller; Barcode und Etikett, wenn’s exakt sein soll.",
+          "Leicht. Ein Kurzbefehl — keine Mega-App.",
+        ],
+      },
+      compare: {
+        title: "Auf einen Blick",
+        lead: "Gegenüber typischen Kalorien-Apps (Yazio, MyFitnessPal, Oviva & Co.).",
+        colProduct: "AI Kalorien",
+        colOther: "Typische Apps",
+        rows: [
+          { label: "Preis", ours: "Kostenlos", other: "Oft Freemium / Abo" },
+          { label: "Account", ours: "Nein", other: "Meist ja" },
+          { label: "Apple Health", ours: "Kern-Pfad", other: "Oft optional" },
+          { label: "Installation", ours: "Ein iOS-Kurzbefehl", other: "App Store" },
+        ],
+        fine: "Nur Orientierung. Keine medizinische Beratung.",
+      },
+      underHood: {
+        summary: "Kurz unter der Haube",
+        body: "Apple Intelligence für Foto/Text. Open Food Facts für Barcodes. OCR + Mathe für Etiketten. Review mit Ampel, optionale Korrekturen, dann fünf Health-Samples. ~271 Aktionen — bewusst hybrid, damit das LLM nicht die Rechenarbeit macht.",
+      },
+      install: {
+        title: "Kostenlos ausprobieren",
+        sub: "iPhone oder iPad · Kurzbefehle · ein Tipp.",
+        fine: "Nur Orientierung — keine Ernährungs- oder Medizinberatung. Barcode und Etikett sind für Verpacktes präziser.",
+      },
       cta: {
-        label: "Zur Landingpage",
-        href: "https://ai-kalorien.pages.dev/",
+        label: "iOS-Kurzbefehl hinzufügen",
+        href: "https://www.icloud.com/shortcuts/b2ed7080114a499fadf5efbe46a77fd8",
         external: true,
       },
       linksHeading: "Links",
       links: [
         {
-          label: "Landingpage (Cloudflare Pages)",
+          label: "Landingpage",
           href: "https://ai-kalorien.pages.dev/",
         },
         {
@@ -303,20 +388,88 @@ export const projects: Record<
       tag: "iOS Shortcut",
       card: "Free Shortcut: a photo, text, barcode, or label becomes calories and macros in Apple Health.",
       description:
-        "Free iOS Shortcut by Daniel Riewe: log meals via photo, text, barcode, or label into Apple Health.",
+        "Free iOS Shortcut: photo, text, barcode, or label become kcal and macros in Apple Health. No account.",
       body: [
-        "AI Kalorien is not an App Store product with a subscription funnel — it is an iOS/macOS Shortcut. Log a meal via camera, photo library, text, barcode (Open Food Facts), or nutrition label, then save calories and macros to Apple Health.",
-        "Built for privacy: no tracker account with me. Hybrid: AI where it helps; exact data for packaged food. Guidance only — not medical advice. The full landing page and install link live at ai-kalorien.pages.dev.",
+        "AI Kalorien is not an App Store product with a subscription — it is an iOS/macOS Shortcut (Shortcuts app, iPhone or iPad, v3). Photo, text, barcode, or label, then Apple Health. Free. No account of ours.",
+        "From the Shortcuts menu to logged — no App Store download.",
       ],
+      flow: {
+        title: "How it feels",
+        lead: "From the Shortcuts menu to logged — no App Store download.",
+        shots: [
+          {
+            src: "/images/ai-kalorien/menu.webp",
+            caption: "Menu",
+            alt: "Shortcut menu on iPhone",
+          },
+          {
+            src: "/images/ai-kalorien/text.webp",
+            caption: "Text",
+            alt: "Describe a meal as text",
+          },
+          {
+            src: "/images/ai-kalorien/review.webp",
+            caption: "Review",
+            alt: "Review before saving",
+          },
+          {
+            src: "/images/ai-kalorien/health.webp",
+            caption: "In Health",
+            alt: "Logged values in Apple Health",
+          },
+        ],
+      },
+      inputs: {
+        title: "Five ways in",
+        lead: "AI where you need it. Exact data for packaged food.",
+        items: [
+          { title: "Camera", text: "Snap a plate — restaurant or home.", tag: "AI" },
+          { title: "Photo Library", text: "Log later from photos you already took.", tag: "AI" },
+          { title: "Text", text: "Describe the meal — fast and discreet.", tag: "AI" },
+          { title: "Barcode", text: "Open Food Facts × your grams — no guessing.", tag: "exact" },
+          { title: "Label", text: "OCR on the nutrition panel + portion math.", tag: "exact" },
+        ],
+      },
+      points: {
+        title: "Why this instead of an app",
+        items: [
+          "Free. No subscription funnel.",
+          "Private. No tracker account — data goes to Apple Health.",
+          "Hybrid. AI for plates; barcode and label when exact matters.",
+          "Light. One Shortcut — not another mega-app.",
+        ],
+      },
+      compare: {
+        title: "At a glance",
+        lead: "Versus typical calorie apps (Yazio, MyFitnessPal, Oviva & co.).",
+        colProduct: "AI Kalorien",
+        colOther: "Typical apps",
+        rows: [
+          { label: "Price", ours: "Free", other: "Often freemium / subscription" },
+          { label: "Account", ours: "No", other: "Usually yes" },
+          { label: "Apple Health", ours: "Core path", other: "Often optional" },
+          { label: "Install", ours: "One iOS Shortcut", other: "App Store" },
+        ],
+        fine: "Orientation only. Not medical advice.",
+      },
+      underHood: {
+        summary: "A bit more under the hood",
+        body: "Apple Intelligence for photo/text. Open Food Facts for barcodes. OCR + math for labels. Review with a traffic light, optional corrections, then five Health samples (calories, protein, fat, carbs, fiber). ~271 Shortcut actions — deliberately hybrid so the LLM doesn’t do the arithmetic.",
+      },
+      install: {
+        title: "Try it free",
+        sub: "iPhone or iPad · Shortcuts app · one tap.",
+        fine: "Guidance only — not nutrition or medical advice. Barcode and label are more precise for packaged food.",
+      },
       cta: {
-        label: "Open landing page",
-        href: "https://ai-kalorien.pages.dev/",
+        label: "Add iOS Shortcut",
+        href: "https://www.icloud.com/shortcuts/b2ed7080114a499fadf5efbe46a77fd8",
         external: true,
       },
       linksHeading: "Links",
       links: [
         {
-          label: "Landing page (Cloudflare Pages)",
+          label: "Landing page",
           href: "https://ai-kalorien.pages.dev/",
         },
         {
